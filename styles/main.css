@@ -237,17 +237,24 @@ footer {
   color: #6a3326;
   padding: 15px;
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
   white-space: nowrap; /* Se till så texten alltid är på en rad, blev två rader för adressen till GAMLESTADEN annars */
   width: 90%; /* Utgångsbredd */
-  max-width: 400px; /* Se till så blocken ej blir för breda */
+  max-width: 600px; /* Se till så blocken ej blir för breda */
   justify-self: center; /* Centrera blocken inom grid */
+  padding-left: 5px;
 }
 
 /* footer - textdetaljer "ÖJERSJÖ, PARTILLE, GAMLESTADEN" i infoblocken för dom 3 restaurangerna */
 .restaurant-block h3 {
-  font-size: 30px;
+  font-size: 45px;
   font-weight: bold;
+  text-align: center; /* spara över ärd positionering */
+}
+
+/* footer - justering av telefonnummer och öppetider i infoblocken för dom 3 restaurangerna */
+.restaurant-block p {
+  font-size: 25px;
 }
 
 /* footer - justering av länkarna (adresser) i infoblocken för dom 3 restaurangerna */
@@ -255,6 +262,7 @@ footer {
   color: #6a3326; /* Ändra från blå till standardfärg för text */
   text-decoration: none; /* Ta bort underlinjen från länkarna */
   font-weight: bold;
+  font-size: 20px;
 }
 
 /* footer - underlinje när man hovrar eller tycker på adresser i infoblocken för dom 3 restaurangerna */
