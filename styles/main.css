@@ -26,8 +26,8 @@ header {
 
 /* header - DELISSIMO högst upp */
 header h1 {
-  background-color: #E0DECE;
-  color: #6A3326;
+  background-color: #e0dece;
+  color: #6a3326;
   padding: 15px 30px;
   border-radius: 10px; /* Runda hörn */
   display: inline-block; /* Wrappa runt texten + padding */
@@ -46,8 +46,8 @@ header h1 {
 
 /* header - individuella språkknappar */
 .lang-btn {
-  background-color: #E0DECE;
-  color: #6A3326;
+  background-color: #e0dece;
+  color: #6a3326;
   border: none;
   padding: 4px 6px;
   border-radius: 6px;
@@ -59,7 +59,7 @@ header h1 {
 
 /* header - effekt när man håller musen över språkalternativen, syns även när man klickar på mobil */
 .lang-btn:hover {
-  background-color: #E0DECE;
+  background-color: #e0dece;
 }
 
 /* header grid - navigeringsmenyn högst upp */
@@ -80,8 +80,8 @@ nav ul {
 
 /* header - individuella knappar i navigationsmenyn */
 nav ul li a {
-  background-color: #E0DECE;
-  color: #6A3326;
+  background-color: #e0dece;
+  color: #6a3326;
   padding: 8px 5px; /* Reducera padding så det får plats på en rad */
   border-radius: 10px;
   text-decoration: none;
@@ -95,14 +95,14 @@ nav ul li a {
 
 /* effect när man håller musen över alternativen i navigationsmenyn, syns även när man klickar på mobil */
 nav ul li a:hover {
-  background-color: #E0DECE;
+  background-color: #e0dece;
 }
 /* CSS för "index, HEADER" SLUTAR här ------------------------------------------------------- */
 
 /* CSS för "index, MAIN CONTENT" BÖRJAR här ------------------------------------------------------- */
 /* homepage - all MAIN CONTENT på en beige bakgrund */
 .homepage-container {
-  background-color: #E0DECE;
+  background-color: #e0dece;
   padding: 40px;
   display: grid;
   place-items: center;
@@ -233,8 +233,8 @@ footer {
 
 /* footer - individuella infoblock för dom 3 restaurangerna */
 .restaurant-block {
-  background-color: #E0DECE;
-  color: #6A3326;
+  background-color: #e0dece;
+  color: #6a3326;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -252,7 +252,7 @@ footer {
 
 /* footer - justering av länkarna (adresser) i infoblocken för dom 3 restaurangerna */
 .restaurant-block a {
-  color: #6A3326; /* Ändra från blå till standardfärg för text */
+  color: #6a3326; /* Ändra från blå till standardfärg för text */
   text-decoration: none; /* Ta bort underlinjen från länkarna */
   font-weight: bold;
 }
@@ -297,7 +297,7 @@ footer {
 /* CSS för "menu" BÖRJAR här ------------------------------------------------------- */
 /* menu - all MAIN CONTENT på en beige bakgrund */
 .menu-container {
-  background-color: #E0DECE;
+  background-color: #e0dece;
   padding: 40px;
   display: grid;
   place-items: center; /* Centrera innehåll */
@@ -319,8 +319,8 @@ footer {
 /* menu - knapp för "Matpreferenser" */
 #menu-preference-btn {
   background-color: transparent;
-  border: 2px solid #6A3326;
-  color: #6A3326;
+  border: 2px solid #6a3326;
+  color: #6a3326;
   padding: 6px 16px;
   font-size: 12px;
   font-weight: bold;
@@ -334,7 +334,7 @@ footer {
 
 /* menu - hovereffekt för matpreferensknappen */
 #menu-preference-btn:hover {
-  background-color: #6A3326;
+  background-color: #6a3326;
   color: white;
 }
 
@@ -347,6 +347,19 @@ footer {
   max-width: 800px;
   width: 100%;
   text-align: center;
+}
+
+/* menu - dölj elementen, förbli läsbara för skärmläsare */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* menu - subgrupper för menyn (ANTIPASTI, INSALATA, PIZZA, PASTA, DOLCHI) */
@@ -438,7 +451,7 @@ i 4 timmar, och att denna brute force lösning grundar sig i fullständig desper
 
 /* Brute force lösning till att bakgrundsfärgen blir vit istället för #E0DECE från margins. */
 main {
-  background-color: #E0DECE !important;
+  background-color: #e0dece !important;
   display: grid;
   grid-template-rows: auto auto auto auto;
   justify-content: center;
@@ -532,7 +545,7 @@ main {
 /* CSS för "booking" BÖRJAR här ------------------------------------------------------- */
 /* booking - all MAIN CONTENT på en beige bakgrund */
 .booking-container {
-  background-color: #E0DECE;
+  background-color: #e0dece;
   padding: 40px;
   display: grid;
   place-items: center;
@@ -580,7 +593,7 @@ main {
 #booking-form textarea {
   width: 100%;
   padding: 8px;
-  border: 1px solid #6A3326;
+  border: 1px solid #6a3326;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -617,7 +630,7 @@ main {
 /* CSS för "job" BÖRJAR här ------------------------------------------------------- */
 /* job - all MAIN CONTENT på en beige bakgrund */
 .job-container {
-  background-color: #E0DECE;
+  background-color: #e0dece;
   padding: 40px;
   display: grid;
   place-items: center;
@@ -669,7 +682,7 @@ main {
 #job-form textarea {
   width: 100%;
   padding: 8px;
-  border: 1px solid #6A3326;
+  border: 1px solid #6a3326;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -719,7 +732,7 @@ main {
 /* CSS för "extras" BÖRJAR här ------------------------------------------------------- */
 /* extras - all MAIN CONTENT på en beige bakgrund */
 .extras-container {
-  background-color: #E0DECE;
+  background-color: #e0dece;
   padding: 40px;
   display: grid;
   place-items: center;
@@ -800,7 +813,7 @@ th {
 /* extras - tabellceller */
 td {
   padding: 10px;
-  border: 1px solid #6A3326;
+  border: 1px solid #6a3326;
   font-size: 14px;
   text-align: left;
 }
