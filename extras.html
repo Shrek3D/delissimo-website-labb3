@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nicolas Munke Cilano" />
+
+    <title>Delissimo - Extras</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header-container">
+        <h1>DELISSIMO</h1>
+
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+          <button
+            id="lang-sv"
+            class="lang-btn"
+            onclick="setLanguage('sv')"
+            type="button"
+          >
+            Sve
+          </button>
+          <button
+            id="lang-en"
+            class="lang-btn"
+            onclick="setLanguage('en')"
+            type="button"
+          >
+            Eng
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="about.html">Om oss</a></li>
+          <li><a href="booking.html">Boka bord</a></li>
+          <li><a href="job.html">Jobb</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT: filler för video och tabell -->
+    <main class="extras-container">
+      <h2 id="extras-title">Extras</h2>
+
+      <p class="extras-text">
+        When you thought you were about to wrap up lab 2 but then realized you
+        still had to add a video and a table:
+      </p>
+
+      <!-- extras video -->
+      <div class="video-section">
+        <video controls width="400">
+          <source src="videos/lab2video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+          <!-- Fallback message om videon inte går att visas -->
+        </video>
+      </div>
+
+      <!-- extras table -->
+      <div class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Citat</th>
+              <th>Känslan eller tankar citatet ger mig</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Låt inte negativitet förstöra din dag, låt det förstöra hela
+                ditt liv
+              </td>
+              <td>
+                Man ska alltid vara optimistisk när det kommer till hur negativ
+                man tror man kan vara om andra saker
+              </td>
+            </tr>
+            <tr>
+              <td>Må mina tårar 2025 vara lika salt som döda havet</td>
+              <td>
+                Om jag utgår ifrån att allt kommer gå åt helvte så kan jag
+                enbart bli positivt överraskad
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sälj inte solen för en glödlampa, sälj den för en tändsticka
+              </td>
+              <td>
+                Om du måste välja mellan att vara oförutsägbar eller ta en dålig
+                deal, så är det alltid bättre att förbli oförutsägbar
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer-restaurant-info">
+      <div class="footer-container">
+        <div class="restaurant-block">
+          <h3 id="footer-location-1">ÖJERSJÖ</h3>
+          <p id="footer-phone-1">+4670 787 68 02</p>
+          <p id="footer-hours-1">Sön-Tor 11-20, Fre-Lör 11-22</p>
+          <a href="#" id="footer-address-1">Lars Göks Allé 1, 433 51 Öjersjö</a>
+        </div>
+
+        <div class="restaurant-block">
+          <h3 id="footer-location-2">PARTILLE</h3>
+          <p id="footer-phone-2">+4670 444 14 04</p>
+          <p id="footer-hours-2">Mån-Tor 11-20, Fre-Sön 11-22</p>
+          <a href="#" id="footer-address-2">Portgången 3, 433 38 Partille</a>
+        </div>
+
+        <div class="restaurant-block">
+          <h3 id="footer-location-3">GAMLESTADEN</h3>
+          <p id="footer-phone-3">+4670 339 36 56</p>
+          <p id="footer-hours-3">Lör-Tor 11-20, Fre 11-22</p>
+          <a href="#" id="footer-address-3"
+            >Gamlestads Torg 7, 415 12 Göteborg</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <p id="footer-follow-us">Följ oss</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/delissimo.se/" target="_blank">
+            <!-- target="_blank" för öppna länk på ny sida -->
+            <img
+              src="images/facebook-logo.png"
+              alt="Facebook logo icon linking to our Facebook page"
+            />
+          </a>
+          <a href="https://www.instagram.com/delissimo.se/" target="_blank">
+            <!-- target="_blank" för öppna länk på ny sida -->
+            <img
+              src="images/instagram-logo.png"
+              alt="Instagram logo icon linking to our Instagram page"
+            />
+          </a>
+        </div>
+      </div>
+
+      <p>&copy; 2025 Delissimo. ALL RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+</html>

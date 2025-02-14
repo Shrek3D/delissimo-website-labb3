@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <!-- Välja svenska som språk -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Bokstäver, eg. inkludera svenska å, ä, ö -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Responsiv för mobiler -->
+
+    <!-- SEO: Beskrivningar för sökmotorer, eg. Google -->
+    <meta
+      name="description"
+      content="Upptäck vår meny med autentiska italienska rätter"
+    />
+    <meta
+      name="keywords"
+      content="Meny, pasta, pizza, lasagne, italiensk mat"
+    />
+    <meta name="author" content="Nicolas Munke Cilano" />
+
+    <title>Delissimo - Meny</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- Länk till framtida CSS -->
+    <script src="scripts/script.js" defer></script>
+    <!-- Länk till framtida JavaScript, labb 3 egentligen men yolo -->
+  </head>
+
+  <body>
+    <!-- HEADER: titel, navigeringsmeny, språkbyte -->
+    <header>
+      <div class="header-container">
+        <h1>DELISSIMO</h1>
+        <!-- Restaurangens namn -->
+
+        <!-- Byte av språk, kommer kräva JavaScript.. -->
+        <div class="language-switcher">
+          <button
+            id="lang-sv"
+            class="lang-btn"
+            onclick="setLanguage('sv')"
+            type="button"
+          >
+            Sve
+          </button>
+          <button
+            id="lang-en"
+            class="lang-btn"
+            onclick="setLanguage('en')"
+            type="button"
+          >
+            Eng
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigeringsmenyn -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="about.html">Om oss</a></li>
+          <li><a href="booking.html">Boka bord</a></li>
+          <li><a href="job.html">Jobb</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT: meny, introtitel, matpreferensknapp och kategorisering av rätter för olika matpreferenser  (knapp ej implementerat ännu), subgrupper för menyn (förrät, efterrätt etc) och rätter,  top och bot text för subgrupper i menyn-->
+    <main class="menu-container">
+      <!-- menu introtitel -->
+      <h2 id="menu-title">Vår Meny</h2>
+
+      <!-- Matpreferens-knapp (för framtida JavaScript-filtering) -->
+      <!-- Planerade alternativ: Meat, Vegetarian, Pesceterian, Vegan, Gluten-Free, Lactose-Free, Nut-Free -->
+      <button id="menu-preference-btn" type="button">Matpreferenser</button>
+
+      <section class="menu-content">
+        <!-- För webbriktlinje "Presentera innehållet i en meningsfylld ordning" -->
+        <!-- <dl> = Definition List - För att säga till webbläsare och hjälpmedel (skärmläsare etc.) att det är en lista med artiklar med tillhörande beskrivning -->
+        <!-- <dt> = Definition Term - Namnet på artikeln -->
+        <!-- <dd> = Definition Description - Beskrivning till artikeln, och priset -->
+
+        <!-- ANTIPASTI -->
+        <div class="menu-category">
+          <h3 class="menu-section-title">ANTIPASTI</h3>
+
+          <dl class="menu-item" data-category="vegetarian nut-free">
+            <dt id="menu-item-vitloksbrod-name">Vitlöksbröd</dt>
+            <dd id="menu-item-vitloksbrod-desc">
+              Frasigt bröd med vitlök, parmesan & oregano
+              <span id="menu-item-vitloksbrod-price" class="price">79 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-charkbricka-name">Charkbricka</dt>
+            <dd id="menu-item-charkbricka-desc">
+              Italiensk chark såsom salami, prosciutto & bresaola, ruccola &
+              antipasti mix av grönsaker
+              <span id="menu-item-charkbricka-price" class="price">199 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="vegetarian">
+            <dt id="menu-item-burrata-name">Burrata</dt>
+            <dd id="menu-item-burrata-desc">
+              Krämig burrata, körsbärstomater, basilika, ruccola, basilikapesto
+              & balsamico
+              <span id="menu-item-burrata-price" class="price">139 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-carpaccio-name">Carpaccio</dt>
+            <dd id="menu-item-carpaccio-desc">
+              Bresaola, ruccola, parmesan, balsamico
+              <span id="menu-item-carpaccio-price" class="price">189 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="vegetarian gluten-free nut-free">
+            <dt id="menu-item-piccola-insalata-name">Piccola Insalata</dt>
+            <dd id="menu-item-piccola-insalata-desc">
+              Liten sidesallad med sallad, tomat, gurka, feta, lök & ruccola
+              <span id="menu-item-piccola-insalata-price" class="price"
+                >89 kr</span
+              >
+            </dd>
+          </dl>
+        </div>
+
+        <!-- INSALATA -->
+        <div class="menu-category">
+          <h3 class="menu-section-title">INSALATA</h3>
+
+          <p id="menu-INSALATA-top-text" class="menu-description">
+            På Delissimo finns alltid smarrig sallad med över 30 färska råvaror!
+            Grönsalladbas i alla rätterna. Välj valfri sås!
+          </p>
+
+          <dl class="menu-item" data-category="meat">
+            <dt id="menu-item-caesar-name">Ceasar</dt>
+            <dd id="menu-item-caesar-desc">
+              Kycklingfilé & rökt bacon från ugnen med romansallad, hemmagjorda
+              krutonger, gurka, tomat, parmesan & ruccola
+              <span id="menu-item-caesar-price" class="price">149 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="vegan gluten-free nut-free">
+            <dt id="menu-item-sole-name">Sole</dt>
+            <dd id="menu-item-sole-desc">
+              Grillad italiensk grönsaksröra (paprika, tomater, aubergine,
+              kronärtskocka & zucchini), färsk tomat, gurka & oliver
+              <span id="menu-item-sole-price" class="price">145 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat">
+            <dt id="menu-item-pollo-name">Pollo</dt>
+            <dd id="menu-item-pollo-desc">
+              Kycklingfilé, gurka, tomat, rödlök, majs, feta & pestopasta
+              <span id="menu-item-pollo-price" class="price">145 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-carne-name">Carne</dt>
+            <dd id="menu-item-carne-desc">
+              Prosciutto, Salami Milano & Bresaola, gurka, körsbärstomater,
+              parmesan, oliver, ruccola
+              <span id="menu-item-carne-price" class="price">169 kr</span>
+            </dd>
+          </dl>
+
+          <p id="menu-INSALATA-bot-text" class="menu-description sauces">
+            <strong>SÅSER:</strong> Caesar, Vitlök, Vinägrette, Pesto,
+            Mangocurry, Tryffelmayo & Chillimayo. Passar även perfekt till
+            krispig pizza!
+          </p>
+        </div>
+
+        <!-- PIZZA -->
+        <div class="menu-category">
+          <h3 class="menu-section-title">PIZZA</h3>
+
+          <p id="menu-PIZZA-top-text" class="menu-description">
+            Surdegspizza, jäst i 72 timmar för en unik frasig upplevelse. Alla
+            pizzor har en bas med tomatsås samt mozzarella och toppas med färsk
+            ruccola. (Vi har även glutenfri pizzadeg +15 kr samt veganost).
+          </p>
+
+          <dl class="menu-item" data-category="vegetarian gluten-free vegan">
+            <dt id="menu-item-margherita-name">Margherita</dt>
+            <dd id="menu-item-margherita-desc">
+              Klassiker där vi förhöjer smaken med vår hemmagjorda Basilikapesto
+              <span id="menu-item-margherita-price" class="price">135 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-capri-name">Capri</dt>
+            <dd id="menu-item-capri-desc">
+              Prosciutto, Oliver & Kronärtskocka
+              <span id="menu-item-capri-price" class="price">159 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free nut-free">
+            <dt id="menu-item-salami-name">Salami</dt>
+            <dd id="menu-item-salami-desc">
+              Salami Milano, Paprika & egengjord Pesto av soltorkade tomater
+              <span id="menu-item-salami-price" class="price">159 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="vegetarian gluten-free">
+            <dt id="menu-item-formaggio-name">Formaggio</dt>
+            <dd id="menu-item-formaggio-desc">
+              Mozzarella, Parmesan, Gorgonzola & Feta. För ostälskaren!
+              <span id="menu-item-formaggio-price" class="price">155 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-bresaola-name">Bresaola</dt>
+            <dd id="menu-item-bresaola-desc">
+              Lufttorkad Bresaola av Black Angus kött, Champinjoner, Tryffelolja
+              & Parmesan
+              <span id="menu-item-bresaola-price" class="price">165 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="vegetarian gluten-free">
+            <dt id="menu-item-vegetale-name">Vegetale</dt>
+            <dd id="menu-item-vegetale-desc">
+              Grillade Italienska Grönsaker (Zucchini, Aubergine, Kronärtskocka,
+              Paprika & soltorkad Tomat) Toppas med basilikapesto
+              <span id="menu-item-vegetale-price" class="price">155 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="seafood gluten-free">
+            <dt id="menu-item-di-mare-name">Di Mare</dt>
+            <dd id="menu-item-di-mare-desc">
+              Räkor, Tonfisk, Kräftstjärtar & Romsås
+              <span id="menu-item-di-mare-price" class="price">159 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-simone-name">Simone</dt>
+            <dd id="menu-item-simone-desc">
+              Hickoryrökt Bacon, Rödlök & Färsk Vitlök
+              <span id="menu-item-simone-price" class="price">159 kr</span>
+            </dd>
+          </dl>
+
+          <p id="menu-PIZZA-bot-text" class="menu-description burrata-topping">
+            LYXA TILL DET?! TOPPA MED EN BURRATA +60:-
+          </p>
+        </div>
+
+        <!-- PASTA -->
+        <div class="menu-category">
+          <h3 class="menu-section-title">PASTA</h3>
+
+          <p id="menu-PASTA-top-text" class="menu-description">
+            Pasta av 100% Italiensk durumvete. Alla våra pastarätter toppas med
+            färsk ruccola samt riven parmesanost. Alla pasta rätterna går att få
+            gluten- samt laktosfria. Finns även veganska/vegetariska alternativ!
+          </p>
+
+          <dl
+            class="menu-item"
+            data-category="vegan vegetarian gluten-free lactose-free"
+          >
+            <dt id="menu-item-arrabiata-name">Arrabiata</dt>
+            <dd id="menu-item-arrabiata-desc">
+              Körsbärstomater, Tomatsås, Rödlök, Piri Piri, Persilja & Vitlök
+              <span id="menu-item-arrabiata-price" class="price">129 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="vegetarian gluten-free">
+            <dt id="menu-item-funghi-name">Funghi</dt>
+            <dd id="menu-item-funghi-desc">
+              Champinjoner, Portabello, Basilika, Vitlök, Funghipesto & Grädde
+              <span id="menu-item-funghi-price" class="price">149 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-carbonara-name">Carbonara</dt>
+            <dd id="menu-item-carbonara-desc">
+              Bacon, Grädde, Äggula, Svartpeppar, Vitlök & Parmesan
+              <span id="menu-item-carbonara-price" class="price">159 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-alfredo-name">Alfredo</dt>
+            <dd id="menu-item-alfredo-desc">
+              Kycklingfilé, Grädde, Persilja, Vitlök & Parmesan
+              <span id="menu-item-alfredo-price" class="price">165 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-rosso-name">Rosso</dt>
+            <dd id="menu-item-rosso-desc">
+              Salami Milano, Pesto av soltorkade tomater, Grädde & Tomatsås,
+              Persilja & Rödlök
+              <span id="menu-item-rosso-price" class="price">159 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-verde-name">Verde</dt>
+            <dd id="menu-item-verde-desc">
+              Kycklingfilé, Basilikapesto, Grädde, Körsbärstomater & Parmesan
+              <span id="menu-item-verde-price" class="price">165 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-bianco-name">Bianco</dt>
+            <dd id="menu-item-bianco-desc">
+              Oxfilé, Funghipesto, Grädde, Rödlök, Champinjoner & Tryffelolja
+              <span id="menu-item-bianco-price" class="price">179 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="seafood gluten-free">
+            <dt id="menu-item-scampi-name">Scampi</dt>
+            <dd id="menu-item-scampi-desc">
+              Scampi, Rödlök, Persilja, Vitlök, Pesto Rosso, Tomatsås, Grädde &
+              Chilli
+              <span id="menu-item-scampi-price" class="price">179 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="meat gluten-free">
+            <dt id="menu-item-lasagne-name">Lasagne</dt>
+            <dd id="menu-item-lasagne-desc">
+              Bolognese av nötfärs, serveras med ruccola, parmesan,
+              körsbärstomater & balsamico
+              <span id="menu-item-lasagne-price" class="price">149 kr</span>
+            </dd>
+          </dl>
+        </div>
+
+        <!-- DOLCHI -->
+        <div class="menu-category">
+          <h3 class="menu-section-title">DOLCHI</h3>
+
+          <dl class="menu-item" data-category="vegetarian">
+            <dt id="menu-item-cannoli-name">Cannoli</dt>
+            <dd id="menu-item-cannoli-desc">
+              Siciliansk handgjord specialitet, frasigt krokantrör fylld med
+              nötkräm
+              <span id="menu-item-cannoli-price" class="price">95 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="vegetarian">
+            <dt id="menu-item-tiramisu-name">Tiramisu</dt>
+            <dd id="menu-item-tiramisu-desc">
+              Hemmagjord italiensk klassiker
+              <span id="menu-item-tiramisu-price" class="price">85 kr</span>
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="vegetarian">
+            <dt id="menu-item-nutellapizza-name">Nutellapizza</dt>
+            <dd id="menu-item-nutellapizza-desc">
+              Frasig och farligt god, pyntas med diverse sötsaker
+              <span id="menu-item-nutellapizza-price" class="price"
+                >119 kr</span
+              >
+            </dd>
+          </dl>
+
+          <dl class="menu-item" data-category="vegetarian gluten-free">
+            <dt id="menu-item-affogato-name">Affogato</dt>
+            <dd id="menu-item-affogato-desc">
+              Espresso & vaniljglass
+              <span id="menu-item-affogato-price" class="price">75 kr</span>
+            </dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER: Info för 3 restaurangerna, sociala medier, copyright krimskrams -->
+    <footer id="footer-restaurant-info">
+      <!-- ID för att kunna skrolla ner till Footer när man trycker på "BESTÄLL" i homepage -->
+      <div class="footer-container">
+        <!-- Öjersjö -->
+        <div class="restaurant-block">
+          <h3 id="footer-location-1">ÖJERSJÖ</h3>
+          <p id="footer-phone-1">+4670 787 68 02</p>
+          <p id="footer-hours-1">Sön-Tor 11-20, Fre-Lör 11-22</p>
+          <a href="#" id="footer-address-1">Lars Göks Allé 1, 433 51 Öjersjö</a>
+        </div>
+
+        <!-- Partille -->
+        <div class="restaurant-block">
+          <h3 id="footer-location-2">PARTILLE</h3>
+          <p id="footer-phone-2">+4670 444 14 04</p>
+          <p id="footer-hours-2">Mån-Tor 11-20, Fre-Sön 11-22</p>
+          <a href="#" id="footer-address-2">Portgången 3, 433 38 Partille</a>
+        </div>
+
+        <!-- Gamlestaden -->
+        <div class="restaurant-block">
+          <h3 id="footer-location-3">GAMLESTADEN</h3>
+          <p id="footer-phone-3">+4670 339 36 56</p>
+          <p id="footer-hours-3">Lör-Tor 11-20, Fre 11-22</p>
+          <a href="#" id="footer-address-3"
+            >Gamlestads Torg 7, 415 12 Göteborg</a
+          >
+        </div>
+      </div>
+
+      <!-- Sociala medier -->
+      <div class="footer-social">
+        <p id="footer-follow-us">Följ oss</p>
+        <div class="social-icons">
+          <!-- Så jag kan ha "Följ oss" överst, sedan dom två ikonerna bredvid varandra under -->
+          <a href="https://www.facebook.com/delissimo.se/" target="_blank">
+            <!-- target="_blank" för öppna länk på ny sida -->
+            <img
+              src="images/facebook-logo.png"
+              alt="Facebook logo icon linking to our Facebook page"
+          /></a>
+          <a href="https://www.instagram.com/delissimo.se/" target="_blank">
+            <!-- target="_blank" för öppna länk på ny sida -->
+            <img
+              src="images/instagram-logo.png"
+              alt="Instagram logo icon linking to our Instagram page"
+          /></a>
+        </div>
+      </div>
+
+      <!-- Copyright-bajs -->
+      <p>&copy; 2025 Delissimo. ALL RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+</html>

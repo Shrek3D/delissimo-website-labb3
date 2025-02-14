@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <!-- Välja svenska som språk -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Bokstäver, eg. inkludera svenska å, ä, ö -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Responsiv för mobiler -->
+
+    <!-- SEO: Beskrivningar för sökmotorer, eg. Google -->
+    <meta
+      name="description"
+      content="Jobba hos Delissimo - Se våra lediga tjänster och skicka in din ansökan"
+    />
+    <meta
+      name="keywords"
+      content="Jobb, lediga tjänster, restaurangjobb, Delissimo"
+    />
+    <meta name="author" content="Nicolas Munke Cilano" />
+
+    <title>Delissimo - Jobb</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- Länk till framtida CSS -->
+    <script src="scripts/script.js" defer></script>
+    <!-- Länk till framtida JavaScript, labb 3 egentligen men yolo -->
+  </head>
+
+  <body>
+    <!-- HEADER: titel, navigeringsmeny, språkbyte -->
+    <header>
+      <div class="header-container">
+        <h1>DELISSIMO</h1>
+        <!-- Restaurangens namn -->
+
+        <!-- Byte av språk, kommer kräva JavaScript.. -->
+        <div class="language-switcher">
+          <button
+            id="lang-sv"
+            class="lang-btn"
+            onclick="setLanguage('sv')"
+            type="button"
+          >
+            Sve
+          </button>
+          <button
+            id="lang-en"
+            class="lang-btn"
+            onclick="setLanguage('en')"
+            type="button"
+          >
+            Eng
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigeringsmenyn -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="about.html">Om oss</a></li>
+          <li><a href="booking.html">Boka bord</a></li>
+          <li><a href="job.html">Jobb</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT: job, introtitel, lediga tjänster, ansökningsformulär för lediga tjänster -->
+    <main class="job-container">
+      <!-- job introtitel -->
+      <h2 id="job-title">Jobb</h2>
+
+      <!-- Lediga tjänster block -->
+      <section class="job-openings">
+        <h3 id="job-openings-title">LEDIGA TJÄNSTER</h3>
+        <div id="job-listings">
+          <!-- Lediga tjänster läggs till här wieee -->
+        </div>
+      </section>
+
+      <!-- job ansökningsformulär -->
+      <!-- novalidate för att stänga av webbläsarens egna validering, gör egen i JavaScript -->
+      <form
+        id="job-form"
+        action="https://formspree.io/f/xpwqjezd"
+        method="POST"
+        enctype="multipart/form-data"
+        novalidate
+      >
+
+        <!-- autocomplete för autofill i webbläsaren -->
+        <label for="job-name" id="job-label-name">Namn:</label>
+        <input
+          type="text"
+          id="job-name"
+          name="name"
+          autocomplete="name"
+          required
+        />
+
+        <!-- Börja med tom <span>. Lägger till error meddelande med JavaScript om validering misslyckas.
+        aria-live för realtids errormeddelande för dom med skärmläsare -->
+        <span
+          class="error-message"
+          id="error-job-name"
+          aria-live="polite"
+        ></span>
+
+        <!-- autocomplete för autofill i webbläsaren -->
+        <label for="job-email" id="job-label-email">E-post:</label>
+        <input
+          type="email"
+          id="job-email"
+          name="email"
+          autocomplete="email"
+          required
+        />
+
+        <!-- Börja med tom <span>. Lägger till error meddelande med JavaScript om validering misslyckas.
+        aria-live för realtids errormeddelande för dom med skärmläsare -->
+        <span
+          class="error-message"
+          id="error-job-email"
+          aria-live="polite"
+        ></span>
+
+        <!-- pattern [0-9+\s-]{8,15}$ för vilka tecken som är tillåtet:
+        ^ för matcha input i start av string
+        "0-9" för nummer 0-9
+        "+" för riktnummer
+        "\s" för blanksteg
+        "-" för bindestreck i telefonnummer 
+        {8,15} för mellan 8 och 15 tecken
+        $ för slutet av string-->
+        <!-- autocomplete för autofill i webbläsaren -->
+        <label for="job-phone" id="job-label-phone">Telefonnummer:</label>
+        <input
+          type="tel"
+          id="job-phone"
+          name="phone"
+          autocomplete="tel"
+          pattern="^[0-9+\s-]{8,15}$"
+          required
+        />
+
+        <!-- Börja med tom <span>. Lägger till error meddelande med JavaScript om validering misslyckas.
+        aria-live för realtids errormeddelande för dom med skärmläsare -->
+        <span
+          class="error-message"
+          id="error-job-phone"
+          aria-live="polite"
+        ></span>
+
+        <label for="job-message" id="job-label-message">Meddelande:</label>
+        <textarea id="job-message" name="message" rows="3"></textarea>
+
+        <label for="job-file" id="job-label-file">Ladda upp CV:</label>
+        <input
+          type="file"
+          id="job-file"
+          name="file"
+          accept=".pdf,.doc,.docx"
+          required
+        />
+
+        <!-- Börja med tom <span>. Lägger till error meddelande med JavaScript om validering misslyckas.
+      aria-live för realtids errormeddelande för dom med skärmläsare -->
+        <span
+          class="error-message"
+          id="error-job-file"
+          aria-live="polite"
+        ></span>
+
+        <!-- GDPR klickruta -->
+        <div class="gdpr-consent">
+          <input type="checkbox" id="job-gdpr" name="gdpr" required />
+          <label for="job-gdpr" id="job-label-gdpr">
+            Jag samtycker till att mina personuppgifter behandlas enligt
+            integritetspolicyn.
+          </label>
+
+          <!-- Börja med tom <span>. Lägger till error meddelande med JavaScript om validering misslyckas.
+        aria-live för realtids errormeddelande för dom med skärmläsare -->
+          <span
+            class="error-message"
+            id="error-job-gdpr"
+            aria-live="polite"
+          ></span>
+        </div>
+
+        <button type="submit" id="job-submit">Skicka</button>
+
+        <!-- Dolt bekräftelsemeddelande, görs synligt med JavaScript efter lyckad submission -->
+        <p id="success-message" style="display: none; color: #6a3326">
+          Tack! Din jobbansökan har skickats.
+        </p>
+      </form>
+    </main>
+
+    <!-- FOOTER: Info för 3 restaurangerna, sociala medier, copyright krimskrams -->
+    <footer id="footer-restaurant-info">
+      <!-- ID för att kunna skrolla ner till Footer när man trycker på "BESTÄLL" i homepage -->
+      <div class="footer-container">
+        <!-- Öjersjö -->
+        <div class="restaurant-block">
+          <h3 id="footer-location-1">ÖJERSJÖ</h3>
+          <p id="footer-phone-1">+4670 787 68 02</p>
+          <p id="footer-hours-1">Sön-Tor 11-20, Fre-Lör 11-22</p>
+          <a href="#" id="footer-address-1">Lars Göks Allé 1, 433 51 Öjersjö</a>
+        </div>
+
+        <!-- Partille -->
+        <div class="restaurant-block">
+          <h3 id="footer-location-2">PARTILLE</h3>
+          <p id="footer-phone-2">+4670 444 14 04</p>
+          <p id="footer-hours-2">Mån-Tor 11-20, Fre-Sön 11-22</p>
+          <a href="#" id="footer-address-2">Portgången 3, 433 38 Partille</a>
+        </div>
+
+        <!-- Gamlestaden -->
+        <div class="restaurant-block">
+          <h3 id="footer-location-3">GAMLESTADEN</h3>
+          <p id="footer-phone-3">+4670 339 36 56</p>
+          <p id="footer-hours-3">Lör-Tor 11-20, Fre 11-22</p>
+          <a href="#" id="footer-address-3"
+            >Gamlestads Torg 7, 415 12 Göteborg</a
+          >
+        </div>
+      </div>
+
+      <!-- Sociala medier -->
+      <div class="footer-social">
+        <p id="footer-follow-us">Följ oss</p>
+        <div class="social-icons">
+          <!-- Så jag kan ha "Följ oss" överst, sedan dom två ikonerna bredvid varandra under -->
+          <a href="https://www.facebook.com/delissimo.se/" target="_blank">
+            <!-- target="_blank" för öppna länk på ny sida -->
+            <img
+              src="images/facebook-logo.png"
+              alt="Facebook logo icon linking to our Facebook page"
+          /></a>
+          <a href="https://www.instagram.com/delissimo.se/" target="_blank">
+            <!-- target="_blank" för öppna länk på ny sida -->
+            <img
+              src="images/instagram-logo.png"
+              alt="Instagram logo icon linking to our Instagram page"
+          /></a>
+        </div>
+      </div>
+
+      <!-- Copyright-bajs -->
+      <p>&copy; 2025 Delissimo. ALL RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+</html>

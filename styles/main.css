@@ -1,0 +1,866 @@
+/* Ta bort vit ram runt sidan*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS för "index" BÖRJAR här ------------------------------------------------------- */
+/* CSS för "index, HEADER" BÖRJAR här ------------------------------------------------------- */
+header {
+  background-color: #284232;
+  color: white;
+  padding: 15px;
+  display: grid;
+  align-items: center;
+  position: relative; /* Positionering i header */
+}
+
+/* header - för positionering av DELISSIMO och språkknappar i header */
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr auto; /* DELISSIMO tar mest plats, knapparna tar så lite som möjligt */
+  align-items: center;
+  position: relative; /* Positionering i .header-container */
+  text-align: center;
+}
+
+/* header - DELISSIMO högst upp */
+header h1 {
+  background-color: #E0DECE;
+  color: #6A3326;
+  padding: 15px 30px;
+  border-radius: 10px; /* Runda hörn */
+  display: inline-block; /* Wrappa runt texten + padding */
+  margin: 5px auto; /* Centrera */
+}
+
+/* header grid - för språkbytare */
+.language-switcher {
+  display: grid;
+  grid-template-rows: auto auto; /* Två rader för knapparna Sve, Eng (vertikalt) */
+  gap: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* header - individuella språkknappar */
+.lang-btn {
+  background-color: #E0DECE;
+  color: #6A3326;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* header - effekt när man håller musen över språkalternativen, syns även när man klickar på mobil */
+.lang-btn:hover {
+  background-color: #E0DECE;
+}
+
+/* header grid - navigeringsmenyn högst upp */
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* 5 lika stora kolumner för dom 5 alternativen */
+  gap: 5px;
+  justify-content: center; /* Centrera navigeringsmenyn */
+  padding: 0;
+  margin: 10px auto;
+  max-width: 97%; /* Se till så allt får plats på skärmen och ej spiller över, använd max 97% av parent containers widd */
+  width: 90%; /* Sprid ut navigeringsmenyn på 90% av parent containers widd som utgångspunkt */
+  list-style: none; /* Ta bort punkterna från listan */
+}
+
+/* header - individuella knappar i navigationsmenyn */
+nav ul li a {
+  background-color: #E0DECE;
+  color: #6A3326;
+  padding: 8px 5px; /* Reducera padding så det får plats på en rad */
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap; /* Se till så alternativen alltid är skrivna på 1 rad, "Om oss" och "Boka bord" skrivs på 2 rader annars */
+  display: block; /* Hela knappen går att trycka på, inga bara texten för alternativen */
+  font-size: 14px; /* Slightly smaller text */
+  text-align: center;
+  transition: background-color 0.3s ease; /* Mjukare färgändring när man tycker på knappen på mobil, samma sak fast när man håller musen över alternativet på datorn  */
+}
+
+/* effect när man håller musen över alternativen i navigationsmenyn, syns även när man klickar på mobil */
+nav ul li a:hover {
+  background-color: #E0DECE;
+}
+/* CSS för "index, HEADER" SLUTAR här ------------------------------------------------------- */
+
+/* CSS för "index, MAIN CONTENT" BÖRJAR här ------------------------------------------------------- */
+/* homepage - all MAIN CONTENT på en beige bakgrund */
+.homepage-container {
+  background-color: #E0DECE;
+  padding: 40px;
+  display: grid;
+  place-items: center;
+}
+
+/* homepage grid - introtitel och -text */
+.homepage-intro {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* homepage - introtitel */
+.homepage-intro h2 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* homepage - introtext */
+.homepage-intro p {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* homepage grid - 3 knappar och bild (logotyp) */
+.homepage-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Knappar till vänster, Bild 1 till höger */
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* homepage grid - 3 knappar */
+.homepage-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  justify-content: center;
+  max-width: 300px;
+  width: 100%;
+}
+
+/* homepage - individuella knappar  */
+.homepage-buttons .cta-button {
+  background-color: #284232;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* homepage - hovereffect 3 knappar */
+.homepage-buttons .cta-button:hover {
+  background-color: #1d2e27;
+}
+
+/* homepage - reset färgen av knappar efter man tryckt. "BESTÄLL" blev mörkare efter klick, fult iom är kvar på samma sida då man skickas ner till footer och sedan kan scrolla upp igen */
+.homepage-buttons .cta-button:visited {
+  background-color: #284232;
+}
+
+/* homepage - Bild 1, bredvid 3 knappar */
+.homepage-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* homepage - Bild 2 wrapper, lyckades ej få bilden att fungera utan, förstörde hela gränssnittet */
+.background-wrapper {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+/* homepage - Bild 2, under knappar */
+.homepage-background img {
+  width: 100%;
+  height: auto; /* Behåll ursprunlig aspect ratio */
+  display: block;
+  object-fit: cover;
+}
+/* CSS för "index, MAIN CONTENT" SLUTAR här ------------------------------------------------------- */
+
+/* CSS för "index, FOOTER" BÖRJAR här ------------------------------------------------------- */
+/* Mjukare skrollning när man trycker på "BESTÄLL" i homepage */
+html {
+  scroll-behavior: smooth;
+}
+
+footer {
+  background-color: #284232;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* footer grid - för positionering av info för dom 3 restaurangerna + sociala medier */
+.footer-container {
+  display: grid;
+  grid-template-rows: repeat(4, auto); /* 3 restauranger + sociala medier */
+  justify-content: center; /* Centrera horisontellt */
+  align-items: center; /* Centerera vertikalt */
+  gap: 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+/* footer - individuella infoblock för dom 3 restaurangerna */
+.restaurant-block {
+  background-color: #E0DECE;
+  color: #6A3326;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  white-space: nowrap; /* Se till så texten alltid är på en rad, blev två rader för adressen till GAMLESTADEN annars */
+  width: 90%; /* Utgångsbredd */
+  max-width: 400px; /* Se till så blocken ej blir för breda */
+  justify-self: center; /* Centrera blocken inom grid */
+}
+
+/* footer - textdetaljer "ÖJERSJÖ, PARTILLE, GAMLESTADEN" i infoblocken för dom 3 restaurangerna */
+.restaurant-block h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* footer - justering av länkarna (adresser) i infoblocken för dom 3 restaurangerna */
+.restaurant-block a {
+  color: #6A3326; /* Ändra från blå till standardfärg för text */
+  text-decoration: none; /* Ta bort underlinjen från länkarna */
+  font-weight: bold;
+}
+
+/* footer - underlinje när man hovrar eller tycker på adresser i infoblocken för dom 3 restaurangerna */
+.restaurant-block a:hover {
+  text-decoration: underline;
+}
+
+/* footer grid - positionering till "Följ oss" och ikoner för sociala medier */
+.footer-social {
+  display: grid;
+  grid-template-rows: auto auto; /* "Följ oss" i en rad, ikoner i raden under */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* footer - textdetaljer "Följ oss" */
+.footer-social p {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+/* footer grid - positionering för ikoner till facebook/instagram */
+.social-icons {
+  display: grid;
+  grid-template-columns: auto auto; /* Facebook/Instagram-ikoner bredvid varandra */
+  gap: 5px; /* Avstånd mellan ikonerna */
+}
+
+/* footer - justering av ikoner för sociala medier */
+.footer-social a img {
+  width: 75px;
+  margin: 0 5px;
+}
+/* CSS för "index, FOOTER" SLUTAR här ------------------------------------------------------- */
+/* CSS för "index" SLUTAR här ------------------------------------------------------- */
+
+/* CSS för "menu" BÖRJAR här ------------------------------------------------------- */
+/* menu - all MAIN CONTENT på en beige bakgrund */
+.menu-container {
+  background-color: #E0DECE;
+  padding: 40px;
+  display: grid;
+  place-items: center; /* Centrera innehåll */
+}
+
+/* menu - introtitel */
+#menu-title {
+  background-color: #284232;
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 42px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* menu - knapp för "Matpreferenser" */
+#menu-preference-btn {
+  background-color: transparent;
+  border: 2px solid #6A3326;
+  color: #6A3326;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  align-self: start;
+  justify-self: start;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* menu - hovereffekt för matpreferensknappen */
+#menu-preference-btn:hover {
+  background-color: #6A3326;
+  color: white;
+}
+
+/* menu - grön bakgrund som omger alla menykategorier */
+.menu-content {
+  background-color: #284232;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* menu - subgrupper för menyn (ANTIPASTI, INSALATA, PIZZA, PASTA, DOLCHI) */
+.menu-section-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* menu - extratext för subgrupper i menyn, hänvisas med top/bot beroende på om texten är innan maträtter eller efter */
+.menu-description {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* menu - enskilda maträtter */
+.menu-item {
+  text-align: left;
+  max-width: 600px;
+}
+
+/* menu - justera avstånd mellan maträttens namn och beskrivning */
+.menu-item dt {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+/* menu - justera beskrivningens utseende */
+.menu-item dd {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* menu - se till att priset följer direkt efter förklaringen av maträtten */
+.menu-item .price {
+  font-weight: bold;
+  margin-left: 5px; /* Liten marginal så det inte klibbar fast i sista ordet */
+}
+
+/* menu - extratext (bot) för subgrupp "INSALATA" */
+.sauces {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: left;
+}
+
+/* menu - extratext (bot) för subgrupp "PIZZA" */
+.burrata-topping {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: left;
+}
+/* CSS för "menu" SLUTAR här ------------------------------------------------------- */
+
+/* CSS för "about" BÖRJAR här ------------------------------------------------------- */
+
+/* OBS OBS LÄS, VIKTIGT FÖR about CSS!!!!!!!!!!!!!! --- !!!!!!!! --- !!!!!
+DENNA SKIT VÄGRAR FUNGERA. Går inte att ändra bakgrundsfärgen i about-container, försökt i flera timmar.
+Har ändrat <main class="about-container">
+till <main class="about-container" style="background-color: #E0DECE;">
+Sätter alltså bakgrundsfärg direkt i HTML-koden. Har centrerat allt innehåll individuellt istället.
+Margins gör så bakgrundsfärgen försvinner emellan header och "Om oss"-rutan.
+Jag har fundamental behövt ändra hur jag kodat CSS för just about-sidan. Det är något som är väldigt fel med specifikt
+about-container, och det felen påverkar hur mycket annan CSS på sidan beter sig. Koden kan därmed se väldigt märklig ut.
+Jag har helt behövt utgå ifrån Live Server Tab för att visuelt se hur koden faktiskt yttrats och sen utgått ifrån den
+visuella bilden, inte vad det borde vara baserat på koden. Jag betonar att jag suttit med just about-container problemet
+i 4 timmar, och att denna brute force lösning grundar sig i fullständig desperation och inte lathet.
+
+.about-container {
+  background-color: #E0DECE;
+  padding: 40px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+*/
+
+/* Brute force lösning till att bakgrundsfärgen blir vit istället för #E0DECE från margins. */
+main {
+  background-color: #E0DECE !important;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+}
+
+/* about - introtitel */
+#about-title {
+  background-color: #284232;
+  color: white;
+  text-align: center;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  display: block;
+  margin: 10px auto;
+  margin-top: 75px;
+  max-width: 280px;
+}
+
+/* about grid - positionering introtext */
+.about-content {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 5px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* about - introtext */
+#about-text {
+  font-size: 14px;
+  line-height: 1.3;
+  max-width: 650px;
+  width: 95%;
+  text-align: center;
+  margin: 5px auto;
+  padding: 0px;
+  word-wrap: break-word;
+}
+
+/* about grid - positionering 3 knappar (BESTÄLL, MENY, BOKA BORD) */
+.about-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(90px, 1fr));
+  gap: 5px;
+  justify-content: center;
+  max-width: 420px;
+  width: 95%;
+  margin: 5px auto;
+}
+
+/* about - individuella knappdetaljer för dom 3 knapparna */
+.about-buttons .cta-button {
+  background-color: #284232;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  min-width: 80px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+/* about - Bild 1 wrapper */
+.about-background {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px; /* Reduce spacing before image */
+}
+
+/* about - Bild 1 */
+.about-background img {
+  width: 100%;
+  height: auto;
+  max-width: 680px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+/* CSS för "about" SLUTAR här ------------------------------------------------------- */
+
+/* CSS för "booking" BÖRJAR här ------------------------------------------------------- */
+/* booking - all MAIN CONTENT på en beige bakgrund */
+.booking-container {
+  background-color: #E0DECE;
+  padding: 40px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* booking - introtitel */
+#booking-title {
+  background-color: #284232;
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 42px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* booking - introtext */
+#booking-description {
+  font-size: 16px;
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* booking grid - positionering formulär */
+#booking-form {
+  display: grid;
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* booking - etiketter för formulär */
+#booking-form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* booking - fält i formulär */
+#booking-form input,
+#booking-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #6A3326;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* booking - knappen "Skicka" */
+#booking-submit {
+  background-color: #284232;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  min-width: 100px;
+  margin: 10px auto;
+  display: block;
+}
+
+/* booking - hovereffekt för knappen "Skicka" */
+#booking-submit:hover {
+  background-color: #1d2e27;
+}
+
+/* booking - reset färgen för knappen "Skicka" efter man tryckt */
+#booking-submit:visited {
+  background-color: #284232;
+}
+
+/* CSS för "booking" SLUTAR här ------------------------------------------------------- */
+
+/* CSS för "job" BÖRJAR här ------------------------------------------------------- */
+/* job - all MAIN CONTENT på en beige bakgrund */
+.job-container {
+  background-color: #E0DECE;
+  padding: 40px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* job - introtitel */
+#job-title {
+  background-color: #284232;
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 42px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* job - ruta för lediga tjänster */
+.job-openings {
+  background-color: #284232;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* job grid - positionering för ansökningsformuläret */
+#job-form {
+  display: grid;
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* job - etiketter för ansökningsformulär */
+#job-form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* job - fält i ansökningsformulär */
+#job-form input,
+#job-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #6A3326;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* job - filuppladdning i ansökningsformulär */
+#job-file {
+  padding: 6px;
+  font-size: 14px;
+}
+
+/* job - GDPR samtycke i ansökningsformulär*/
+.gdpr-consent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+}
+
+/* job - knappen "Skicka" */
+#job-submit {
+  background-color: #284232;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* job - hovereffekt för knappen "Skicka" */
+#job-submit:hover {
+  background-color: #1d2e27;
+}
+
+/* job - reset färgen för knappen "Skicka" efter man tryckt */
+#job-submit:visited {
+  background-color: #284232;
+}
+/* CSS för "job" SLUTAR här ------------------------------------------------------- */
+
+/* CSS för "extras" BÖRJAR här ------------------------------------------------------- */
+/* extras - all MAIN CONTENT på en beige bakgrund */
+.extras-container {
+  background-color: #E0DECE;
+  padding: 40px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* extras - introtitel */
+#extras-title {
+  background-color: #284232;
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 300px;
+}
+
+/* extras - introtext */
+.extras-text {
+  font-size: 16px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* extras - video centrerad */
+.video-section {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* extras - video styling */
+.video-section video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* extras grid - positionering tabell */
+.table-section {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+/* extras - tabell */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* extras - tabellrubriker */
+th {
+  background-color: #284232;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* extras - tabellceller */
+td {
+  padding: 10px;
+  border: 1px solid #6A3326;
+  font-size: 14px;
+  text-align: left;
+}
+/* CSS för "extras" SLUTAR här ------------------------------------------------------- */
+
+/* CSS Media Queries BÖRJAR här ------------------------------------------------------- */
+/* För att uppfylla krav i deluppgift 6 - anpassa fontstorlekar på små kärmar */
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 22px; /* Minska storleken på DELISSIMO-logon */
+  }
+
+  h2 {
+    font-size: 15px; /* Minska storleken på huvudtitlar */
+  }
+
+  p {
+    font-size: 10px; /* Göra texten mer kompakt */
+  }
+}
+/* CSS Media Queries SLUTAR här ------------------------------------------------------- */
+
+/* CSS Print Styles BÖRJAR här, specifikt för sidan "menu" ------------------------------------------------------- */
+/* - Förbättra utskrift av menyn, använder !important för att alltid överskrida tidigare specifikationer*/
+@media print {
+  nav,
+  .homepage-buttons,
+  .footer-container,
+  .footer-social,
+  .cta-button,
+  .language-switcher,
+  #menu-preference-btn {
+    display: none !important; /* Dölj valda saker */
+  }
+
+  /* But till vit bakgrundsfärg */
+  body {
+    background: white !important;
+  }
+
+  /* Justera färg för rubriker och maträtter (maträtter hade ljusgrå svårläst färg annars) */
+  h1,
+  h2,
+  h3,
+  .menu-content {
+    color: black !important;
+  }
+
+  /* Gör "DELISSIMO" mycket större */
+  h1 {
+    font-size: 100px !important;
+    text-align: center !important;
+    font-weight: bold !important;
+  }
+
+  /* Gör "Vår Meny" mycket större */
+  #menu-title {
+    font-size: 70px !important;
+    margin-top: 0px !important;
+  }
+}
+/* CSS Print Styles SLUTAR här ------------------------------------------------------- */
