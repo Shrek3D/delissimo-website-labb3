@@ -20,10 +20,22 @@
     <meta name="author" content="Nicolas Munke Cilano" >
 
     <title>Delissimo - Jobb</title>
-    <link rel="stylesheet" href="styles/main.css" >
-    <!-- Länk till framtida CSS -->
+
+    <!-- Länk till CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- Länk till jQuery för Labb 3-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Länk till jQuery UI (CSS & JS) för Labb 3 -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Länk till JavaScript för Labb 3, defer för att ladda efter DOM -->
     <script src="scripts/script.js" defer></script>
-    <!-- Länk till framtida JavaScript, labb 3 egentligen men yolo -->
   </head>
 
   <body>
@@ -33,12 +45,12 @@
         <h1>DELISSIMO</h1>
         <!-- Restaurangens namn -->
 
-        <!-- Byte av språk, kommer kräva JavaScript.. -->
+        <!-- Byte av språk med JavaScript -->
         <div class="language-switcher">
           <button
             id="lang-sv"
             class="lang-btn"
-            onclick="setLanguage('sv')"
+            onclick="setLanguage('sv', 'true')"
             type="button"
           >
             Sve
@@ -46,7 +58,7 @@
           <button
             id="lang-en"
             class="lang-btn"
-            onclick="setLanguage('en')"
+            onclick="setLanguage('en', 'true')"
             type="button"
           >
             Eng
@@ -57,11 +69,11 @@
       <!-- Navigeringsmenyn -->
       <nav>
         <ul>
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="menu.html">Meny</a></li>
-          <li><a href="about.html">Om oss</a></li>
-          <li><a href="booking.html">Boka bord</a></li>
-          <li><a href="job.html">Jobb</a></li>
+          <li><a id="home" href="index.html">Hem</a></li>
+          <li><a id="menu" href="menu.html">Meny</a></li>
+          <li><a id="about" href="about.html">Om oss</a></li>
+          <li><a id="booking" href="booking.html">Boka bord</a></li>
+          <li><a id="job" href="job.html">Jobb</a></li>
         </ul>
       </nav>
     </header>
@@ -172,13 +184,13 @@
           aria-live="polite"
         ></span>
 
-        <!-- GDPR klickruta -->
-        <div class="gdpr-consent">
-          <input type="checkbox" id="job-gdpr" name="gdpr" required />
-          <label for="job-gdpr" id="job-label-gdpr">
-            Jag samtycker till att mina personuppgifter behandlas enligt
-            integritetspolicyn.
-          </label>
+<!-- GDPR klickruta -->
+<div class="gdpr-consent">
+  <input type="checkbox" id="job-gdpr" name="job-gdpr" required />
+  <label for="job-gdpr" id="job-label-gdpr" class="gdpr-label">
+    Jag samtycker till att mina personuppgifter behandlas enligt integritetspolicyn.
+  </label>
+</div>
 
           <!-- Börja med tom <span>. Lägger till error meddelande med JavaScript om validering misslyckas.
         aria-live för realtids errormeddelande för dom med skärmläsare -->

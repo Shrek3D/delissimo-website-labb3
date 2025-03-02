@@ -1,30 +1,41 @@
 <!DOCTYPE html>
+<!-- Välja svenska som språk -->
 <html lang="sv">
-  <!-- Välja svenska som språk -->
-
   <head>
-    <meta charset="UTF-8" >
     <!-- Bokstäver, eg. inkludera svenska å, ä, ö -->
+    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <!-- Responsiv för mobiler -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO: Beskrivningar för sökmotorer, eg. Google -->
     <meta
       name="description"
       content="Delissimo – Italiensk restaurangkedja med pasta och pizza"
-    >
+    />
     <meta
       name="keywords"
       content="Italiensk mat, restaurang, Delissimo, pasta, pizza"
-    >
-    <meta name="author" content="Nicolas Munke Cilano" >
+    />
+    <meta name="author" content="Nicolas Munke Cilano" />
 
     <title>Delissimo - Hem</title>
-    <link rel="stylesheet" href="styles/main.css" >
-    <!-- Länk till framtida CSS -->
+
+    <!-- Länk till CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- Länk till jQuery för Labb 3-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Länk till jQuery UI (CSS & JS) för Labb 3 -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Länk till JavaScript för Labb 3, defer för att ladda efter DOM -->
     <script src="scripts/script.js" defer></script>
-    <!-- Länk till framtida JavaScript, labb 3 egentligen men yolo -->
   </head>
 
   <body>
@@ -34,12 +45,22 @@
         <h1>DELISSIMO</h1>
         <!-- Restaurangens namn -->
 
-        <!-- Byte av språk, kommer kräva JavaScript.. -->
+        <!-- Byte av språk med JavaScript -->
         <div class="language-switcher">
-          <button id="lang-sv" class="lang-btn" onclick="setLanguage('sv')" type="button">
+          <button
+            id="lang-sv"
+            class="lang-btn"
+            onclick="setLanguage('sv', 'true')"
+            type="button"
+          >
             Sve
           </button>
-          <button id="lang-en" class="lang-btn" onclick="setLanguage('en')" type="button">
+          <button
+            id="lang-en"
+            class="lang-btn"
+            onclick="setLanguage('en', 'true')"
+            type="button"
+          >
             Eng
           </button>
         </div>
@@ -48,11 +69,11 @@
       <!-- Navigeringsmenyn -->
       <nav>
         <ul>
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="menu.html">Meny</a></li>
-          <li><a href="about.html">Om oss</a></li>
-          <li><a href="booking.html">Boka bord</a></li>
-          <li><a href="job.html">Jobb</a></li>
+          <li><a id="home" href="index.html">Hem</a></li>
+          <li><a id="menu" href="menu.html">Meny</a></li>
+          <li><a id="about" href="about.html">Om oss</a></li>
+          <li><a id="booking" href="booking.html">Boka bord</a></li>
+          <li><a id="job" href="job.html">Jobb</a></li>
         </ul>
       </nav>
     </header>
@@ -60,7 +81,6 @@
     <!-- MAIN CONTENT: homepage, introtitel och -text, 3 knappar för BESTÄLL, MENY och BOKA BORD, logotyp, stor bild längst ner -->
     <main>
       <section class="homepage-container">
-        
         <!-- homepage introtitel och -text -->
         <section class="homepage-intro">
           <h2 id="homepage-intro-title">ITALIENSKINFLUERAD PÄRLA</h2>
@@ -75,7 +95,10 @@
         <div class="homepage-content">
           <!-- homepage knappar -->
           <div class="homepage-buttons">
-            <a href="#footer-restaurant-info" id="homepage-order" class="cta-button"
+            <a
+              href="#footer-restaurant-info"
+              id="homepage-order"
+              class="cta-button"
               >BESTÄLL</a
             >
             <!-- Skrolla ner till Footer när man trycker på "BESTÄLL" på homepage -->
@@ -87,7 +110,7 @@
 
           <!-- homepage Bild 1 -->
           <div class="homepage-logo">
-            <img src="images/logo2-removebg-preview.png" alt="Logotype" >
+            <img src="images/logo2-removebg-preview.png" alt="Logotype" />
           </div>
         </div>
       </section>
@@ -96,7 +119,7 @@
       <section class="homepage-background">
         <div class="background-wrapper">
           <!-- Fick ej bilden att fungera utan detta, förstörde hela gränssnittet -->
-          <img src="images/homepage-bakgrund.jpg" alt="Restaurant Table" >
+          <img src="images/homepage-bakgrund.jpg" alt="Restaurant Table" />
         </div>
       </section>
     </main>
@@ -126,9 +149,9 @@
           <h3 id="footer-location-3">GAMLESTADEN</h3>
           <p id="footer-phone-3">+4670 339 36 56</p>
           <p id="footer-hours-3">Lör-Tor 11-20, Fre 11-22</p>
-            <a href="#" id="footer-address-3"
-              >Gamlestads Torg 7, 415 12 Göteborg</a
-            >
+          <a href="#" id="footer-address-3"
+            >Gamlestads Torg 7, 415 12 Göteborg</a
+          >
         </div>
       </div>
 
@@ -142,13 +165,13 @@
             <img
               src="images/facebook-logo.png"
               alt="Facebook logo icon linking to our Facebook page"
-          ></a>
+          /></a>
           <a href="https://www.instagram.com/delissimo.se/" target="_blank">
             <!-- target="_blank" för öppna länk på ny sida -->
             <img
               src="images/instagram-logo.png"
               alt="Instagram logo icon linking to our Instagram page"
-          ></a>
+          /></a>
         </div>
       </div>
 

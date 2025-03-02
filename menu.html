@@ -3,27 +3,39 @@
   <!-- Välja svenska som språk -->
 
   <head>
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8" />
     <!-- Bokstäver, eg. inkludera svenska å, ä, ö -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Responsiv för mobiler -->
 
     <!-- SEO: Beskrivningar för sökmotorer, eg. Google -->
     <meta
       name="description"
       content="Upptäck vår meny med autentiska italienska rätter"
-    >
+    />
     <meta
       name="keywords"
       content="Meny, pasta, pizza, lasagne, italiensk mat"
-    >
-    <meta name="author" content="Nicolas Munke Cilano" >
+    />
+    <meta name="author" content="Nicolas Munke Cilano" />
 
     <title>Delissimo - Meny</title>
-    <link rel="stylesheet" href="styles/main.css" >
-    <!-- Länk till framtida CSS -->
+
+    <!-- Länk till CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- Länk till jQuery för Labb 3-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Länk till jQuery UI (CSS & JS) för Labb 3 -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Länk till JavaScript för Labb 3, defer för att ladda efter DOM -->
     <script src="scripts/script.js" defer></script>
-    <!-- Länk till framtida JavaScript, labb 3 egentligen men yolo -->
   </head>
 
   <body>
@@ -33,12 +45,12 @@
         <h1>DELISSIMO</h1>
         <!-- Restaurangens namn -->
 
-        <!-- Byte av språk, kommer kräva JavaScript.. -->
+        <!-- Byte av språk med JavaScript -->
         <div class="language-switcher">
           <button
             id="lang-sv"
             class="lang-btn"
-            onclick="setLanguage('sv')"
+            onclick="setLanguage('sv', 'true')"
             type="button"
           >
             Sve
@@ -46,7 +58,7 @@
           <button
             id="lang-en"
             class="lang-btn"
-            onclick="setLanguage('en')"
+            onclick="setLanguage('en', 'true')"
             type="button"
           >
             Eng
@@ -57,26 +69,118 @@
       <!-- Navigeringsmenyn -->
       <nav>
         <ul>
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="menu.html">Meny</a></li>
-          <li><a href="about.html">Om oss</a></li>
-          <li><a href="booking.html">Boka bord</a></li>
-          <li><a href="job.html">Jobb</a></li>
+          <li><a id="home" href="index.html">Hem</a></li>
+          <li><a id="menu" href="menu.html">Meny</a></li>
+          <li><a id="about" href="about.html">Om oss</a></li>
+          <li><a id="booking" href="booking.html">Boka bord</a></li>
+          <li><a id="job" href="job.html">Jobb</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- MAIN CONTENT: meny, introtitel, matpreferensknapp och kategorisering av rätter för olika matpreferenser  (knapp ej implementerat ännu), subgrupper för menyn (förrät, efterrätt etc) och rätter,  top och bot text för subgrupper i menyn-->
+    <!-- MAIN CONTENT: meny, introtitel, matpreferensknapp och kategorisering av rätter för olika matpreferenser, subgrupper för menyn (förrät, efterrätt etc) och rätter,  top och bot text för subgrupper i menyn-->
     <main class="menu-container">
       <!-- menu introtitel -->
       <h2 id="menu-title">Vår Meny</h2>
 
-      <!-- Matpreferens-knapp (för framtida JavaScript-filtering) -->
-      <!-- Planerade alternativ: Meat, Vegetarian, Pesceterian, Vegan, Gluten-Free, Lactose-Free, Nut-Free -->
+      <!-- Tillägg Labb 3 BÖRJAR här ------------------------------------------------------------ -->
+
+      <!-- Task 2 - JavaScript into your HTML & Task 4 - jQuery  -->
+      <!-- Matpreferens-knapp för att toggla dropdownmeny med klickrutor for diverse matpreferenser -->
+      <!-- Planerade alternativ:  Pesceterian, Vegetarian, Vegan, Gluten-Free, Lactose-Free, Nut-Free -->
       <button id="menu-preference-btn" type="button">Matpreferenser</button>
 
+      <!-- dropdownmeny med alternativen för olika matpreferenser -->
+      <div id="menu-food-preference-dropdown-container">
+        <div id="menu-food-preference-dropdown">
+          <div class="menu-food-preference-group">
+            <input
+              type="checkbox"
+              id="menu-dropdown-pesceterian"
+              class="preference-checkbox"
+              value="pesceterian"
+            />
+            <label
+              for="menu-dropdown-pesceterian"
+              id="menu-label-dropdown-pesceterian"
+              >Pesceterian</label
+            >
+          </div>
+
+          <div class="menu-food-preference-group">
+            <input
+              type="checkbox"
+              id="menu-dropdown-vegetarian"
+              class="preference-checkbox"
+              value="vegetarian"
+            />
+            <label
+              for="menu-dropdown-vegetarian"
+              id="menu-label-dropdown-vegetarian"
+              >Vegetarian</label
+            >
+          </div>
+
+          <div class="menu-food-preference-group">
+            <input
+              type="checkbox"
+              id="menu-dropdown-vegan"
+              class="preference-checkbox"
+              value="vegan"
+            />
+            <label for="menu-dropdown-vegan" id="menu-label-dropdown-vegan"
+              >Vegan</label
+            >
+          </div>
+
+          <div class="menu-food-preference-group">
+            <input
+              type="checkbox"
+              id="menu-dropdown-gluten-free"
+              class="preference-checkbox"
+              value="gluten-free"
+            />
+            <label
+              for="menu-dropdown-gluten-free"
+              id="menu-label-dropdown-gluten-free"
+              >Glutenfri</label
+            >
+          </div>
+
+          <div class="menu-food-preference-group">
+            <input
+              type="checkbox"
+              id="menu-dropdown-lactose-free"
+              class="preference-checkbox"
+              value="lactose-free"
+            />
+            <label
+              for="menu-dropdown-lactose-free"
+              id="menu-label-dropdown-lactose-free"
+              >Laktosfri</label
+            >
+          </div>
+
+          <div class="menu-food-preference-group">
+            <input
+              type="checkbox"
+              id="menu-dropdown-nut-free"
+              class="preference-checkbox"
+              value="nut-free"
+            />
+            <label
+              for="menu-dropdown-nut-free"
+              id="menu-label-dropdown-nut-free"
+              >Nötfri</label
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Tillägg Labb 3 SLUTAR här ------------------------------------------------------------ -->
+
       <section class="menu-content">
-        <h2 class="sr-only">Menysektion</h2> <!-- för skärmläsare -->
+        <h2 class="sr-only">Menysektion</h2>
+        <!-- för skärmläsare -->
         <!-- För webbriktlinje "Presentera innehållet i en meningsfylld ordning" -->
         <!-- <dl> = Definition List - För att säga till webbläsare och hjälpmedel (skärmläsare etc.) att det är en lista med artiklar med tillhörande beskrivning -->
         <!-- <dt> = Definition Term - Namnet på artikeln -->
@@ -86,7 +190,7 @@
         <div class="menu-category">
           <h3 class="menu-section-title">ANTIPASTI</h3>
 
-          <dl class="menu-item" data-category="vegetarian nut-free">
+          <dl class="menu-item" data-category="vegetarian pesceterian nut-free">
             <dt id="menu-item-vitloksbrod-name">Vitlöksbröd</dt>
             <dd id="menu-item-vitloksbrod-desc">
               Frasigt bröd med vitlök, parmesan & oregano
@@ -94,7 +198,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl
+            class="menu-item"
+            data-category="gluten-free lactose-free nut-free"
+          >
             <dt id="menu-item-charkbricka-name">Charkbricka</dt>
             <dd id="menu-item-charkbricka-desc">
               Italiensk chark såsom salami, prosciutto & bresaola, ruccola &
@@ -103,7 +210,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="vegetarian">
+          <dl
+            class="menu-item"
+            data-category="pesceterian vegetarian gluten-free"
+          >
             <dt id="menu-item-burrata-name">Burrata</dt>
             <dd id="menu-item-burrata-desc">
               Krämig burrata, körsbärstomater, basilika, ruccola, basilikapesto
@@ -112,7 +222,7 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl class="menu-item" data-category="gluten-free nut-free">
             <dt id="menu-item-carpaccio-name">Carpaccio</dt>
             <dd id="menu-item-carpaccio-desc">
               Bresaola, ruccola, parmesan, balsamico
@@ -120,7 +230,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="vegetarian gluten-free nut-free">
+          <dl
+            class="menu-item"
+            data-category="pesceterian vegetarian gluten-free nut-free"
+          >
             <dt id="menu-item-piccola-insalata-name">Piccola Insalata</dt>
             <dd id="menu-item-piccola-insalata-desc">
               Liten sidesallad med sallad, tomat, gurka, feta, lök & ruccola
@@ -140,7 +253,7 @@
             Grönsalladbas i alla rätterna. Välj valfri sås!
           </p>
 
-          <dl class="menu-item" data-category="meat">
+          <dl class="menu-item" data-category="nut-free">
             <dt id="menu-item-caesar-name">Ceasar</dt>
             <dd id="menu-item-caesar-desc">
               Kycklingfilé & rökt bacon från ugnen med romansallad, hemmagjorda
@@ -149,7 +262,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="vegan gluten-free nut-free">
+          <dl
+            class="menu-item"
+            data-category="pesceterian vegetarian vegan gluten-free lactose-free nut-free"
+          >
             <dt id="menu-item-sole-name">Sole</dt>
             <dd id="menu-item-sole-desc">
               Grillad italiensk grönsaksröra (paprika, tomater, aubergine,
@@ -158,7 +274,7 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat">
+          <dl class="menu-item" data-category="gluten-free">
             <dt id="menu-item-pollo-name">Pollo</dt>
             <dd id="menu-item-pollo-desc">
               Kycklingfilé, gurka, tomat, rödlök, majs, feta & pestopasta
@@ -166,7 +282,7 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl class="menu-item" data-category="gluten-free nut-free">
             <dt id="menu-item-carne-name">Carne</dt>
             <dd id="menu-item-carne-desc">
               Prosciutto, Salami Milano & Bresaola, gurka, körsbärstomater,
@@ -192,7 +308,10 @@
             ruccola. (Vi har även glutenfri pizzadeg +15 kr samt veganost).
           </p>
 
-          <dl class="menu-item" data-category="vegetarian gluten-free vegan">
+          <dl
+            class="menu-item"
+            data-category="pesceterian vegetarian vegan gluten-free lactose-free"
+          >
             <dt id="menu-item-margherita-name">Margherita</dt>
             <dd id="menu-item-margherita-desc">
               Klassiker där vi förhöjer smaken med vår hemmagjorda Basilikapesto
@@ -200,7 +319,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl
+            class="menu-item"
+            data-category="gluten-free lactose-free nut-free"
+          >
             <dt id="menu-item-capri-name">Capri</dt>
             <dd id="menu-item-capri-desc">
               Prosciutto, Oliver & Kronärtskocka
@@ -208,7 +330,7 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free nut-free">
+          <dl class="menu-item" data-category="gluten-free lactose-free">
             <dt id="menu-item-salami-name">Salami</dt>
             <dd id="menu-item-salami-desc">
               Salami Milano, Paprika & egengjord Pesto av soltorkade tomater
@@ -216,7 +338,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="vegetarian gluten-free">
+          <dl
+            class="menu-item"
+            data-category="pesceterian vegetarian gluten-free nut-free"
+          >
             <dt id="menu-item-formaggio-name">Formaggio</dt>
             <dd id="menu-item-formaggio-desc">
               Mozzarella, Parmesan, Gorgonzola & Feta. För ostälskaren!
@@ -224,7 +349,7 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl class="menu-item" data-category="gluten-free nut-free">
             <dt id="menu-item-bresaola-name">Bresaola</dt>
             <dd id="menu-item-bresaola-desc">
               Lufttorkad Bresaola av Black Angus kött, Champinjoner, Tryffelolja
@@ -233,7 +358,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="vegetarian gluten-free">
+          <dl
+            class="menu-item"
+            data-category="pesceterian vegetarian vegan gluten-free lactose-free"
+          >
             <dt id="menu-item-vegetale-name">Vegetale</dt>
             <dd id="menu-item-vegetale-desc">
               Grillade Italienska Grönsaker (Zucchini, Aubergine, Kronärtskocka,
@@ -242,7 +370,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="seafood gluten-free">
+          <dl
+            class="menu-item"
+            data-category="pesceterian gluten-free nut-free"
+          >
             <dt id="menu-item-di-mare-name">Di Mare</dt>
             <dd id="menu-item-di-mare-desc">
               Räkor, Tonfisk, Kräftstjärtar & Romsås
@@ -250,7 +381,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl
+            class="menu-item"
+            data-category="gluten-free lactose-free nut-free"
+          >
             <dt id="menu-item-simone-name">Simone</dt>
             <dd id="menu-item-simone-desc">
               Hickoryrökt Bacon, Rödlök & Färsk Vitlök
@@ -275,7 +409,7 @@
 
           <dl
             class="menu-item"
-            data-category="vegan vegetarian gluten-free lactose-free"
+            data-category="pesceterian vegetarian vegan gluten-free lactose-free nut-free"
           >
             <dt id="menu-item-arrabiata-name">Arrabiata</dt>
             <dd id="menu-item-arrabiata-desc">
@@ -284,7 +418,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="vegetarian gluten-free">
+          <dl
+            class="menu-item"
+            data-category="pesceterian vegetarian gluten-free lactose-free"
+          >
             <dt id="menu-item-funghi-name">Funghi</dt>
             <dd id="menu-item-funghi-desc">
               Champinjoner, Portabello, Basilika, Vitlök, Funghipesto & Grädde
@@ -292,7 +429,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl
+            class="menu-item"
+            data-category="gluten-free lactose-free nut-free"
+          >
             <dt id="menu-item-carbonara-name">Carbonara</dt>
             <dd id="menu-item-carbonara-desc">
               Bacon, Grädde, Äggula, Svartpeppar, Vitlök & Parmesan
@@ -300,7 +440,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl
+            class="menu-item"
+            data-category="gluten-free lactose-free nut-free"
+          >
             <dt id="menu-item-alfredo-name">Alfredo</dt>
             <dd id="menu-item-alfredo-desc">
               Kycklingfilé, Grädde, Persilja, Vitlök & Parmesan
@@ -308,7 +451,7 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl class="menu-item" data-category="gluten-free lactose-free">
             <dt id="menu-item-rosso-name">Rosso</dt>
             <dd id="menu-item-rosso-desc">
               Salami Milano, Pesto av soltorkade tomater, Grädde & Tomatsås,
@@ -317,7 +460,7 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl class="menu-item" data-category="gluten-free lactose-free">
             <dt id="menu-item-verde-name">Verde</dt>
             <dd id="menu-item-verde-desc">
               Kycklingfilé, Basilikapesto, Grädde, Körsbärstomater & Parmesan
@@ -325,7 +468,7 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl class="menu-item" data-category="gluten-free lactose-free">
             <dt id="menu-item-bianco-name">Bianco</dt>
             <dd id="menu-item-bianco-desc">
               Oxfilé, Funghipesto, Grädde, Rödlök, Champinjoner & Tryffelolja
@@ -333,7 +476,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="seafood gluten-free">
+          <dl
+            class="menu-item"
+            data-category="pesceterian gluten-free lactose-free"
+          >
             <dt id="menu-item-scampi-name">Scampi</dt>
             <dd id="menu-item-scampi-desc">
               Scampi, Rödlök, Persilja, Vitlök, Pesto Rosso, Tomatsås, Grädde &
@@ -342,7 +488,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="meat gluten-free">
+          <dl
+            class="menu-item"
+            data-category="gluten-free lactose-free nut-free"
+          >
             <dt id="menu-item-lasagne-name">Lasagne</dt>
             <dd id="menu-item-lasagne-desc">
               Bolognese av nötfärs, serveras med ruccola, parmesan,
@@ -356,7 +505,7 @@
         <div class="menu-category">
           <h3 class="menu-section-title">DOLCHI</h3>
 
-          <dl class="menu-item" data-category="vegetarian">
+          <dl class="menu-item" data-category="pesceterian vegetarian nut-free">
             <dt id="menu-item-cannoli-name">Cannoli</dt>
             <dd id="menu-item-cannoli-desc">
               Siciliansk handgjord specialitet, frasigt krokantrör fylld med
@@ -365,7 +514,7 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="vegetarian">
+          <dl class="menu-item" data-category="pesceterian vegetarian">
             <dt id="menu-item-tiramisu-name">Tiramisu</dt>
             <dd id="menu-item-tiramisu-desc">
               Hemmagjord italiensk klassiker
@@ -373,7 +522,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="vegetarian">
+          <dl
+            class="menu-item"
+            data-category="pesceterian vegetarian vegan gluten-free lactose-free"
+          >
             <dt id="menu-item-nutellapizza-name">Nutellapizza</dt>
             <dd id="menu-item-nutellapizza-desc">
               Frasig och farligt god, pyntas med diverse sötsaker
@@ -383,7 +535,10 @@
             </dd>
           </dl>
 
-          <dl class="menu-item" data-category="vegetarian gluten-free">
+          <dl
+            class="menu-item"
+            data-category="pesceterian vegetarian gluten-free nut-free"
+          >
             <dt id="menu-item-affogato-name">Affogato</dt>
             <dd id="menu-item-affogato-desc">
               Espresso & vaniljglass
@@ -435,13 +590,13 @@
             <img
               src="images/facebook-logo.png"
               alt="Facebook logo icon linking to our Facebook page"
-          ></a>
+          /></a>
           <a href="https://www.instagram.com/delissimo.se/" target="_blank">
             <!-- target="_blank" för öppna länk på ny sida -->
             <img
               src="images/instagram-logo.png"
               alt="Instagram logo icon linking to our Instagram page"
-          ></a>
+          /></a>
         </div>
       </div>
 

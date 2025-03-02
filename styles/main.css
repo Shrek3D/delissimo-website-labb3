@@ -27,7 +27,7 @@ header {
 /* header - DELISSIMO högst upp */
 header h1 {
   background-color: #e0dece;
-  color: #6A3326;
+  color: #6a3326;
   padding: 15px 30px;
   border-radius: 10px; /* Runda hörn */
   display: inline-block; /* Wrappa runt texten + padding */
@@ -47,7 +47,7 @@ header h1 {
 /* header - individuella språkknappar */
 .lang-btn {
   background-color: #e0dece;
-  color: #6A3326;
+  color: #6a3326;
   border: none;
   padding: 4px 6px;
   border-radius: 6px;
@@ -81,7 +81,7 @@ nav ul {
 /* header - individuella knappar i navigationsmenyn */
 nav ul li a {
   background-color: #e0dece;
-  color: #6A3326;
+  color: #6a3326;
   padding: 8px 5px; /* Reducera padding så det får plats på en rad */
   border-radius: 10px;
   text-decoration: none;
@@ -234,7 +234,7 @@ footer {
 /* footer - individuella infoblock för dom 3 restaurangerna */
 .restaurant-block {
   background-color: #e0dece;
-  color: #6A3326;
+  color: #6a3326;
   padding: 15px;
   border-radius: 10px;
   text-align: left;
@@ -259,7 +259,7 @@ footer {
 
 /* footer - justering av länkarna (adresser) i infoblocken för dom 3 restaurangerna */
 .restaurant-block a {
-  color: #6A3326; /* Ändra från blå till standardfärg för text */
+  color: #6a3326; /* Ändra från blå till standardfärg för text */
   text-decoration: none; /* Ta bort underlinjen från länkarna */
   font-weight: bold;
   font-size: 20px;
@@ -327,8 +327,8 @@ footer {
 /* menu - knapp för "Matpreferenser" */
 #menu-preference-btn {
   background-color: transparent;
-  border: 2px solid #6A3326;
-  color: #6A3326;
+  border: 2px solid #6a3326;
+  color: #6a3326;
   padding: 6px 16px;
   font-size: 12px;
   font-weight: bold;
@@ -342,7 +342,7 @@ footer {
 
 /* menu - hovereffekt för matpreferensknappen */
 #menu-preference-btn:hover {
-  background-color: #6A3326;
+  background-color: #6a3326;
   color: white;
 }
 
@@ -601,7 +601,7 @@ main {
 #booking-form textarea {
   width: 100%;
   padding: 8px;
-  border: 1px solid #6A3326;
+  border: 1px solid #6a3326;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -642,7 +642,6 @@ main {
   padding: 40px;
   display: grid;
   place-items: center;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -665,8 +664,6 @@ main {
   color: white;
   padding: 20px;
   text-align: center;
-  width: 100%;
-  max-width: 600px;
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -675,22 +672,20 @@ main {
 #job-form {
   display: grid;
   gap: 15px;
-  max-width: 400px;
-  width: 100%;
 }
 
 /* job - etiketter för ansökningsformulär */
 #job-form label {
   font-weight: bold;
   font-size: 14px;
+  width: 300px;
 }
 
 /* job - fält i ansökningsformulär */
 #job-form input,
 #job-form textarea {
-  width: 100%;
   padding: 8px;
-  border: 1px solid #6A3326;
+  border: 1px solid #6a3326;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -701,14 +696,20 @@ main {
   font-size: 14px;
 }
 
-/* job - GDPR samtycke i ansökningsformulär*/
+/* job grid - container för gdpr-klickruta och och samtycketext */
 .gdpr-consent {
   display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 20px;
-  font-size: 12px;
+  grid-template-columns: auto 1fr; /* Align checkbox and text */
+  gap: 10px;
+  font-size: 15px;
 }
+
+/* job - gdrp-klickruta */
+.gdpr-consent input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
 
 /* job - knappen "Skicka" */
 #job-submit {
@@ -821,7 +822,7 @@ th {
 /* extras - tabellceller */
 td {
   padding: 10px;
-  border: 1px solid #6A3326;
+  border: 1px solid #6a3326;
   font-size: 14px;
   text-align: left;
 }
@@ -885,3 +886,53 @@ td {
   }
 }
 /* CSS Print Styles SLUTAR här ------------------------------------------------------- */
+
+/* Tillägg Labb 3 BÖRJAR här ------------------------------------------------------------ */
+/* CSS för "menu" FORTSÄTTER här ------------------------------------------------------------ */
+/* Task 2 - JavaScript into your HTML & Task 4 - jQuery */
+
+/* menu - döljda dropdownmenyn */
+#menu-food-preference-dropdown-container {
+  display: none;
+  justify-self: start; /* positionera dropdownmenyn till vänster */
+  width: 100%;
+  max-width: 400px;
+}
+
+/* menu grid - container för dom 6 paren av klickrutor/tillhörande text  */
+#menu-food-preference-dropdown {
+  display: grid;
+  /* 3 par av klickruta/tillhörande text på varje rad */
+  grid-template-columns: repeat(3, auto);
+  /* 2 rader */
+  grid-template-rows: repeat(2, auto);
+  border: 1px solid #6a3326;
+  border-radius: 5px;
+}
+
+/* menu - par av klickruta/tillhörande text 
+#menu-food-preference-group {
+  
+} */
+
+/* menu - individuella klickrutor */
+#menu-food-preference-dropdown-container input[type="checkbox"] {
+  margin-right: 3px; /* avstånd mellan klickruta och tillhörande text */
+  width: 16px;
+  height: 17px;
+
+  /* övre och undre avstånd för par av klickrutor/tillhörande text*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* menu - individuella texterna till klickrutorna */
+#menu-food-preference-dropdown-container label {
+  font-size: 16px;
+  white-space: nowrap;
+
+  /* flytta upp texten en aning */
+  position: relative;
+  top: -3px;
+}
+/* Tillägg Labb 3 SLUTAR här ------------------------------------------------------------ */

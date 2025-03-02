@@ -1,12 +1,27 @@
 <!DOCTYPE html>
+<!-- Välja svenska som språk -->
 <html lang="sv">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="author" content="Nicolas Munke Cilano" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nicolas Munke Cilano" />
 
     <title>Delissimo - Extras</title>
-    <link rel="stylesheet" href="styles/main.css" >
+
+    <!-- Länk till CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- Länk till jQuery för Labb 3-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Länk till jQuery UI (CSS & JS) för Labb 3 -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Länk till JavaScript för Labb 3, defer för att ladda efter DOM -->
     <script src="scripts/script.js" defer></script>
   </head>
 
@@ -16,12 +31,12 @@
       <div class="header-container">
         <h1>DELISSIMO</h1>
 
-        <!-- Language Switcher -->
+        <!-- Byte av språk med JavaScript -->
         <div class="language-switcher">
           <button
             id="lang-sv"
             class="lang-btn"
-            onclick="setLanguage('sv')"
+            onclick="setLanguage('sv', 'true')"
             type="button"
           >
             Sve
@@ -29,7 +44,7 @@
           <button
             id="lang-en"
             class="lang-btn"
-            onclick="setLanguage('en')"
+            onclick="setLanguage('en', 'true')"
             type="button"
           >
             Eng
@@ -40,11 +55,11 @@
       <!-- Navigation Menu -->
       <nav>
         <ul>
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="menu.html">Meny</a></li>
-          <li><a href="about.html">Om oss</a></li>
-          <li><a href="booking.html">Boka bord</a></li>
-          <li><a href="job.html">Jobb</a></li>
+          <li><a id="home" href="index.html">Hem</a></li>
+          <li><a id="menu" href="menu.html">Meny</a></li>
+          <li><a id="about" href="about.html">Om oss</a></li>
+          <li><a id="booking" href="booking.html">Boka bord</a></li>
+          <li><a id="job" href="job.html">Jobb</a></li>
         </ul>
       </nav>
     </header>
@@ -106,6 +121,13 @@
           </tbody>
         </table>
       </div>
+
+      <!-- Tillägg Labb 3 BÖRJAR här ------------------------------------------------------------ -->
+
+      <!-- Task 1 - Hello, JavaScript! -->
+      <button id="hello-btn" type="button">Show Message</button>
+
+      <!-- Tillägg Labb 3 SLUTAR här ------------------------------------------------------------ -->
     </main>
 
     <!-- FOOTER -->
@@ -143,14 +165,14 @@
             <img
               src="images/facebook-logo.png"
               alt="Facebook logo icon linking to our Facebook page"
-            >
+            />
           </a>
           <a href="https://www.instagram.com/delissimo.se/" target="_blank">
             <!-- target="_blank" för öppna länk på ny sida -->
             <img
               src="images/instagram-logo.png"
               alt="Instagram logo icon linking to our Instagram page"
-            >
+            />
           </a>
         </div>
       </div>
