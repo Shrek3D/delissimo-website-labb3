@@ -306,151 +306,151 @@ function updateText(lang) {
       "menu-item-vitloksbrod-name": "Garlic Bread",
       "menu-item-vitloksbrod-desc":
         "Crispy bread with garlic, parmesan & oregano",
-      "menu-item-vitloksbrod-price": "79 kr",
+      "menu-item-vitloksbrod-price": "79 SEK",
 
       "menu-item-charkbricka-name": "Charcuterie Board",
       "menu-item-charkbricka-desc":
         "Italian cold cuts such as salami, prosciutto & bresaola, arugula & mixed antipasti vegetables",
-      "menu-item-charkbricka-price": "199 kr",
+      "menu-item-charkbricka-price": "199 SEK",
 
       "menu-item-burrata-name": "Burrata",
       "menu-item-burrata-desc":
         "Creamy burrata, cherry tomatoes, basil, arugula, basil pesto & balsamic vinegar",
-      "menu-item-burrata-price": "139 kr",
+      "menu-item-burrata-price": "139 SEK",
 
       "menu-item-carpaccio-name": "Carpaccio",
       "menu-item-carpaccio-desc":
         "Bresaola, arugula, parmesan, balsamic vinegar",
-      "menu-item-carpaccio-price": "189 kr",
+      "menu-item-carpaccio-price": "189 SEK",
 
       "menu-item-piccola-insalata-name": "Piccola Insalata",
       "menu-item-piccola-insalata-desc":
         "Small side salad with lettuce, tomato, cucumber, feta, onion & arugula",
-      "menu-item-piccola-insalata-price": "89 kr",
+      "menu-item-piccola-insalata-price": "89 SEK",
 
       // Menu - INSALATA
       "menu-item-caesar-name": "Caesar",
       "menu-item-caesar-desc":
         "Chicken fillet & smoked bacon from the oven with romaine lettuce, homemade croutons, cucumber, tomato, parmesan & arugula",
-      "menu-item-caesar-price": "149 kr",
+      "menu-item-caesar-price": "149 SEK",
 
       "menu-item-sole-name": "Sole",
       "menu-item-sole-desc":
         "Grilled Italian vegetable mix (bell pepper, tomatoes, eggplant, artichoke & zucchini), fresh tomato, cucumber & olives",
-      "menu-item-sole-price": "145 kr",
+      "menu-item-sole-price": "145 SEK",
 
       "menu-item-pollo-name": "Pollo",
       "menu-item-pollo-desc":
         "Chicken fillet, cucumber, tomato, red onion, corn, feta & pesto pasta",
-      "menu-item-pollo-price": "145 kr",
+      "menu-item-pollo-price": "145 SEK",
 
       "menu-item-carne-name": "Carne",
       "menu-item-carne-desc":
         "Prosciutto, Salami Milano & Bresaola, cucumber, cherry tomatoes, parmesan, olives, arugula",
-      "menu-item-carne-price": "169 kr",
+      "menu-item-carne-price": "169 SEK",
 
       // Menu - PIZZA
       "menu-item-margherita-name": "Margherita",
       "menu-item-margherita-desc":
         "A classic enhanced with our homemade basil pesto",
-      "menu-item-margherita-price": "135 kr",
+      "menu-item-margherita-price": "135 SEK",
 
       "menu-item-capri-name": "Capri",
       "menu-item-capri-desc": "Prosciutto, olives & artichokes",
-      "menu-item-capri-price": "159 kr",
+      "menu-item-capri-price": "159 SEK",
 
       "menu-item-salami-name": "Salami",
       "menu-item-salami-desc":
         "Salami Milano, bell pepper & homemade sundried tomato pesto",
-      "menu-item-salami-price": "159 kr",
+      "menu-item-salami-price": "159 SEK",
 
       "menu-item-formaggio-name": "Formaggio",
       "menu-item-formaggio-desc":
         "Mozzarella, parmesan, gorgonzola & feta. For the cheese lovers!",
-      "menu-item-formaggio-price": "155 kr",
+      "menu-item-formaggio-price": "155 SEK",
 
       "menu-item-bresaola-name": "Bresaola",
       "menu-item-bresaola-desc":
         "Air-dried Bresaola from Black Angus beef, mushrooms, truffle oil & parmesan",
-      "menu-item-bresaola-price": "165 kr",
+      "menu-item-bresaola-price": "165 SEK",
 
       "menu-item-vegetale-name": "Vegetale",
       "menu-item-vegetale-desc":
         "Grilled Italian vegetables (zucchini, eggplant, artichoke, bell pepper & sundried tomatoes) topped with basil pesto",
-      "menu-item-vegetale-price": "155 kr",
+      "menu-item-vegetale-price": "155 SEK",
 
       "menu-item-di-mare-name": "Di Mare",
       "menu-item-di-mare-desc": "Shrimp, tuna, crayfish tails & fish roe sauce",
-      "menu-item-di-mare-price": "159 kr",
+      "menu-item-di-mare-price": "159 SEK",
 
       "menu-item-simone-name": "Simone",
       "menu-item-simone-desc": "Hickory-smoked bacon, red onion & fresh garlic",
-      "menu-item-simone-price": "159 kr",
+      "menu-item-simone-price": "159 SEK",
 
       // Menu - PASTA
       "menu-item-arrabiata-name": "Arrabiata",
       "menu-item-arrabiata-desc":
         "Cherry tomatoes, tomato sauce, red onion, chili, parsley & garlic",
-      "menu-item-arrabiata-price": "129 kr",
+      "menu-item-arrabiata-price": "129 SEK",
 
       "menu-item-funghi-name": "Funghi",
       "menu-item-funghi-desc":
         "Mushrooms, portobello, basil, garlic, mushroom pesto & cream",
-      "menu-item-funghi-price": "149 kr",
+      "menu-item-funghi-price": "149 SEK",
 
       "menu-item-carbonara-name": "Carbonara",
       "menu-item-carbonara-desc":
         "Bacon, cream, egg yolk, black pepper, garlic & parmesan",
-      "menu-item-carbonara-price": "159 kr",
+      "menu-item-carbonara-price": "159 SEK",
 
       "menu-item-alfredo-name": "Alfredo",
       "menu-item-alfredo-desc":
         "Chicken fillet, cream, parsley, garlic & parmesan",
-      "menu-item-alfredo-price": "165 kr",
+      "menu-item-alfredo-price": "165 SEK",
 
       "menu-item-rosso-name": "Rosso",
       "menu-item-rosso-desc":
         "Salami Milano, sundried tomato pesto, cream & tomato sauce, parsley & red onion",
-      "menu-item-rosso-price": "159 kr",
+      "menu-item-rosso-price": "159 SEK",
 
       "menu-item-verde-name": "Verde",
       "menu-item-verde-desc":
         "Chicken fillet, basil pesto, cream, cherry tomatoes & parmesan",
-      "menu-item-verde-price": "165 kr",
+      "menu-item-verde-price": "165 SEK",
 
       "menu-item-bianco-name": "Bianco",
       "menu-item-bianco-desc":
         "Beef tenderloin, mushroom pesto, cream, red onion, mushrooms & truffle oil",
-      "menu-item-bianco-price": "179 kr",
+      "menu-item-bianco-price": "179 SEK",
 
       "menu-item-scampi-name": "Scampi",
       "menu-item-scampi-desc":
         "Scampi, red onion, parsley, garlic, red pesto, tomato sauce, cream & chili",
-      "menu-item-scampi-price": "179 kr",
+      "menu-item-scampi-price": "179 SEK",
 
       "menu-item-lasagne-name": "Lasagna",
       "menu-item-lasagne-desc":
         "Bolognese with ground beef, served with arugula, parmesan, cherry tomatoes & balsamic vinegar",
-      "menu-item-lasagne-price": "149 kr",
+      "menu-item-lasagne-price": "149 SEK",
 
       // Menu - DOLCHI
       "menu-item-cannoli-name": "Cannoli",
       "menu-item-cannoli-desc":
         "Sicilian handmade specialty, crispy croquant tube filled with nut cream",
-      "menu-item-cannoli-price": "95 kr",
+      "menu-item-cannoli-price": "95 SEK",
 
       "menu-item-tiramisu-name": "Tiramisu",
       "menu-item-tiramisu-desc": "Homemade Italian classic",
-      "menu-item-tiramisu-price": "85 kr",
+      "menu-item-tiramisu-price": "85 SEK",
 
       "menu-item-nutellapizza-name": "Nutella Pizza",
       "menu-item-nutellapizza-desc":
         "Crispy and dangerously delicious, decorated with assorted sweets",
-      "menu-item-nutellapizza-price": "119 kr",
+      "menu-item-nutellapizza-price": "119 SEK",
 
       "menu-item-affogato-name": "Affogato",
       "menu-item-affogato-desc": "Espresso & vanilla ice cream",
-      "menu-item-affogato-price": "75 kr",
+      "menu-item-affogato-price": "75 SEK",
 
       // Menu - Extra text top and bottom
       "menu-INSALATA-top-text":
@@ -504,29 +504,13 @@ function updateText(lang) {
     },
   };
 
-  // updatera text på alla element som en ID som matchar något i översättningslistan ovan (translations)
+  // updatera text på alla element som har en ID som matchar något i översättningslistan ovan (translations)
   Object.keys(translations[lang]).forEach((id) => {
     let element = document.getElementById(id);
     if (element) {
-      element.textContent = translations[lang][id];
-    }
-  });
-
-  // hantera översättning för definition list med menu-items separat
-  document.querySelectorAll(".menu-item").forEach((menuItem) => {
-    let nameElement = menuItem.querySelector("dt");
-    let descElement = menuItem.querySelector("dd");
-
-    if (nameElement && descElement) {
-      let idName = nameElement.id;
-      let idDesc = descElement.id;
-
-      if (translations[lang][idName]) {
-        nameElement.textContent = translations[lang][idName];
-      }
-      if (translations[lang][idDesc]) {
-        descElement.textContent = translations[lang][idDesc];
-      }
+      let priceSpan = element.querySelector(".price"); // notera priset
+      element.innerHTML = translations[lang][id]; // uppdatera texten (extratexten <span> förloras)
+      if (priceSpan) element.appendChild(priceSpan); // lägg tillbaka priset <span>
     }
   });
 }
@@ -547,7 +531,7 @@ if (helloButton) {
 // använd mousedown() och mouseup() för att visa att tryck på ett alternativ
 // i navigationsmenyn har registrerats
 document.querySelectorAll("nav ul li a").forEach((link) => {
-  // shifta till mörkröd bakgrund och vit text under 0.2 sekunder när
+  // shifta till mörkröd bakgrund och vit text under 0.05 sekunder när
   // man trycker på ett av alternativen
   link.addEventListener("mousedown", function () {
     this.style.backgroundColor = "#6a3326";
@@ -556,10 +540,8 @@ document.querySelectorAll("nav ul li a").forEach((link) => {
 
   // byt tillbaka till dom ursprungliga färgerna när man slutar trycka
   link.addEventListener("mouseup", function () {
-    setTimeout(() => {
-      this.style.backgroundColor = "";
-      this.style.color = "";
-    }, 150); // Flash effect duration
+    this.style.backgroundColor = "";
+    this.style.color = "";
   });
 });
 // SLUT - Task 3 - JavaScript into your HTML -------------------------------------------------------------------------------------
@@ -588,61 +570,80 @@ document.addEventListener("DOMContentLoaded", function () {
     if (formId === "booking-form") {
       // trim för blanksteg
       let name = document.getElementById("booking-name")?.value.trim();
-      // error om inget namn angivs
-      if (name === "") showError("name", "Vänligen ange ditt namn.");
-
-      // trim för blanksteg
-      let email = document.getElementById("booking-email")?.value.trim();
-      if (!email.includes("@"))
-        // error om inget @
-        showError("email", "Vänligen ange en giltig e-postadress.");
-
-      // trim för blanksteg
       let phone = document.getElementById("booking-phone")?.value.trim();
-      if (!/^[0-9+\s-]{8,15}$/.test(phone))
-        // error om ogiltigt nummer
-        showError("phone", "Vänligen ange ett giltigt telefonnummer.");
+      let email = document.getElementById("booking-email")?.value.trim();
+
+      // error om inget namn angivs
+      if (name === "" && savedLanguage == "sv")
+        showError("name", "Vänligen ange ditt namn.");
+      if (name === "" && savedLanguage == "en")
+        showError("name", "Please provide your name.");
+
+      // error om inget @
+      if (!email.includes("@") && savedLanguage == "sv")
+        showError("email", "Vänligen ange en giltig e-postadress.");
+      if (!email.includes("@") && savedLanguage == "en")
+        showError("email", "Please provide a viable  email.");
+
+      // error om ogiltigt nummer
+      if (!/^[0-9+\s-]{8,15}$/.test(phone)) {
+        if (savedLanguage == "sv")
+          showError("phone", "Vänligen ange ett giltigt telefonnummer.");
+        if (savedLanguage == "en")
+          showError("phone", "Please provide a viable phone number.");
+      }
     }
 
     // job formulär, validera varje fält
     if (formId === "job-form") {
       // trim för blanksteg
       let name = document.getElementById("job-name")?.value.trim();
-      // error om inget namn angivs
-      if (name === "") showError("job-name", "Vänligen ange ditt namn.");
-
-      // trim för blanksteg
       let email = document.getElementById("job-email")?.value.trim();
-      if (!email.includes("@"))
-        // error om inget @
-        showError("job-email", "Vänligen ange en giltig e-postadress.");
-
-      // trim för blanksteg
       let phone = document.getElementById("job-phone")?.value.trim();
-      if (!/^[0-9+\s-]{8,15}$/.test(phone))
-        // error om ogiltigt nummer
-        showError("job-phone", "Vänligen ange ett giltigt telefonnummer.");
 
-      let file = document.getElementById("job-file")?.files.length;
+      // error om inget namn angivs
+      if (name === "" && savedLanguage == "sv")
+        showError("job-name", "Vänligen ange ditt namn.");
+      if (name === "" && savedLanguage == "en")
+        showError("job-name", "Please provide your name.");
+
+      // error om inget @
+      if (!email.includes("@") && savedLanguage == "sv")
+        showError("job-email", "Vänligen ange en giltig e-postadress.");
+      if (!email.includes("@") && savedLanguage == "en")
+        showError("job-email", "Please provide a viable  email.");
+
+      // error om ogiltigt nummer
+      if (!/^[0-9+\s-]{8,15}$/.test(phone)) {
+        if (savedLanguage == "sv")
+          showError("job-phone", "Vänligen ange ett giltigt telefonnummer.");
+        if (savedLanguage == "en")
+          showError("job-phone", "Please provide a viable phone number.");
+      }
+
       // error om ingen fil uppladdad
-      if (file === 0) showError("job-file", "Du måste ladda upp ett CV.");
+      let file = document.getElementById("job-file")?.files.length;
+      if (file === 0 && savedLanguage == "sv")
+        showError("job-file", "Vänligen ladda upp ett CV.");
+      if (file === 0 && savedLanguage == "en")
+        showError("job-file", "Please upload a CV.");
 
+      // error om klickbox ej ifylld
       let gdprChecked = document.getElementById("job-gdpr")?.checked;
-      if (!gdprChecked)
-        // error om klickbox ej ifylld
-        showError("job-gdpr", "Du måste godkänna GDPR-villkoren.");
+      if (!gdprChecked && savedLanguage == "sv")
+        showError("job-gdpr", "Vänligen godkänn GDPR-villkoren.");
+      if (!gdprChecked && savedLanguage == "en")
+        showError("job-gdpr", "Please accept the GDPR-conditions.");
     }
 
     // kan ej skicka in formulär om ett steg i valideringen misslyckats
     if (!valid) {
+      // för att stoppa standardformuläret från att skicka
+      // så sidan inte laddas om, nödvändigt pga JavaScript
       event.preventDefault();
       return;
     }
 
-    // om validering lyckas, skicka formuläret via Formspree istället för mailto.
-    // event.preventDefault() för att stoppa standardformuläret från att
-    // skicka så sidan inte laddas om, nödvändigt pga JavaScript
-    event.preventDefault();
     // formuläret som försöktes skickas
     let form = event.target;
     // skapa FormData-objekt för Formspree med alla formulärfält
@@ -709,11 +710,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // START - Task 2 - JavaScript into your HTML & Task 4 - jQuery ----------------------------------------------------------------
   // knapp för att toggla dropdownmenyn
   const preferenceBtn = document.getElementById("menu-preference-btn");
-
-  // dropdownmenyn
-  const dropdown = document.getElementById(
-    "menu-food-preference-dropdown-container"
-  );
 
   // klickrutorna för olika matpreferenser
   const checkboxes = document.querySelectorAll(".preference-checkbox");

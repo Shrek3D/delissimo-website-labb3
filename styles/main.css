@@ -90,7 +90,7 @@ nav ul li a {
   display: block; /* Hela knappen går att trycka på, inga bara texten för alternativen */
   font-size: 14px; /* Slightly smaller text */
   text-align: center;
-  transition: background-color 0.3s ease; /* Mjukare färgändring när man tycker på knappen på mobil, samma sak fast när man håller musen över alternativet på datorn  */
+  transition: background-color 0.05s linear; /* för Task 3 */
 }
 
 /* effect när man håller musen över alternativen i navigationsmenyn, syns även när man klickar på mobil */
